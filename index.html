@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coco Chatru Quartet</title>
+<meta name="description" content="Coco Chatru Quartet spelar egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor. Nya dubbel-LP:n Metropolis släpps i november 2026 på Trygger Music.">
+<link rel="canonical" href="https://cocochatru.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coco Chatru Quartet">
+<meta property="og:description" content="Coco Chatru Quartet spelar egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor. Nya dubbel-LP:n Metropolis släpps i november 2026 på Trygger Music.">
+<meta property="og:url" content="https://cocochatru.com/">
+<meta property="og:image" content="https://cocochatru.com/img/band.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MusicGroup", "name": "Coco Chatru Quartet", "url": "https://cocochatru.com/", "genre": "Jazz", "foundingLocation": "Stockholm", "image": "https://cocochatru.com/img/band.jpg", "email": "cocochatru@gmail.com", "sameAs": ["https://instagram.com/coco_chatru", "https://facebook.com/coco.chatru"], "member": [{"@type": "Person", "name": "Linus Kåse"}, {"@type": "Person", "name": "Charlie Malmberg"}, {"@type": "Person", "name": "Håkan Trygger"}, {"@type": "Person", "name": "Daniel Kåse"}], "album": [{"@type": "MusicAlbum", "name": "Future", "datePublished": "2024", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Limbokolia", "datePublished": "2025", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Lost Christmas", "datePublished": "2025", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Metropolis", "datePublished": "2026", "recordLabel": "Trygger Music"}]}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,700..900&family=Jost:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the Metropolis sleeve as a site. Paper ground, hard spot-colour blocks, circles and rings; photos full-bleed, text on a narrow measure. */
+:root{
+  --paper:#F1ECDD; --paper2:#E8E1CD; --ink:#13110E; --mute:#5E584D; --line:#9C958A;
+  --red:#D33B2C; --blue:#1F4E9E; --mustard:#E6A922; --green:#2E7D4F;
+  --night:#13110E; --cream:#F1ECDD;
+  --display:"Archivo","Arial Black",Impact,sans-serif;
+  --body:"Jost","Futura","Century Gothic",sans-serif;
+  --mono:"DM Mono","Courier New",monospace;
+  --pad:clamp(1rem,4vw,3.25rem);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#15130F;--paper2:#1E1B16;--ink:#F1ECDD;--mute:#B3AC9E;--line:#5E584D;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#15130F;--paper2:#1E1B16;--ink:#F1ECDD;--mute:#B3AC9E;--line:#5E584D;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:var(--display);font-stretch:125%;font-weight:900;line-height:.92;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1.page{font-size:clamp(2.6rem,10vw,8rem);margin-bottom:.35em}
+h2{font-size:clamp(1.9rem,5vw,3.6rem)}
+h3{font-size:1.45rem;line-height:1.05}
+p{margin:0 0 1em}
+.wrap{padding:clamp(2.5rem,7vw,5.5rem) var(--pad)}
+.measure{max-width:40rem}
+.lede{font-size:1.25rem;line-height:1.5;max-width:36rem}
+.mono{font-family:var(--mono);font-size:.82rem;letter-spacing:.02em}
+.mute{color:var(--mute)}
+.btn{display:inline-block;font-weight:600;text-decoration:none;padding:.7rem 1.15rem;background:var(--ink);color:var(--paper);border:2px solid var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--red);border-color:var(--red);color:#fff}
+.draft{font-family:var(--mono);font-size:.72rem;border:1px dashed currentColor;padding:.05rem .4rem;margin-left:.4rem;vertical-align:middle;opacity:.7}
+.dot{display:inline-block;width:.8em;height:.8em;border-radius:50%;vertical-align:-.05em;margin-right:.5em}
+.ring{display:inline-block;width:.95em;height:.95em;border-radius:50%;border:.26em solid var(--mustard);vertical-align:-.12em;margin-right:.45em}
+.rings{aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,var(--mustard) 0 4.2%,transparent 4.2% 8.4%)}
+.actions{display:flex;flex-wrap:wrap;gap:.6rem}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:1rem;padding:.65rem var(--pad)}
+.logo{display:flex;align-items:center;text-decoration:none;font-family:var(--display);font-stretch:125%;font-weight:900;font-size:1.05rem;letter-spacing:.02em;white-space:nowrap}
+nav.main{display:flex;gap:1.3rem;margin-left:auto}
+nav.main a{text-decoration:none;font-weight:500;font-size:.95rem;border-bottom:2px solid transparent;padding:.15rem 0}
+nav.main a[aria-current="page"]{border-bottom-color:var(--red)}
+nav.main a:hover{border-bottom-color:var(--ink)}
+.tools{display:flex;gap:.5rem;align-items:center}
+.lang{display:flex;border:1.5px solid var(--ink)}
+.lang button{font-family:var(--mono);font-size:.78rem;padding:.15rem .5rem}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.cartbtn{font-weight:600;font-size:.9rem;border:1.5px solid var(--ink);padding:.2rem .6rem;white-space:nowrap}
+.cartbtn b{display:inline-block;min-width:1.4em;text-align:center;background:var(--red);color:#fff;margin-left:.35rem;border-radius:1em;font-size:.8rem}
+.menu{display:none;border:1.5px solid var(--ink);padding:.15rem .6rem;font-weight:600}
+@media (max-width:1040px){
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:.4rem var(--pad) 1rem}
+  nav.main.open{display:flex}
+  nav.main a{padding:.6rem 0;font-size:1.15rem;border-bottom:1px solid var(--line)}
+  .menu{display:block;margin-left:auto}
+  .logo .full{display:none}
+}
+@media (max-width:460px){.top{gap:.45rem}.logo{font-size:.9rem}.cartbtn .w{display:none}}
+
+/* hero: the stage */
+.hero{position:relative;overflow:hidden;background:var(--night);color:var(--cream);display:flex;align-items:flex-end;min-height:clamp(27rem,58vw,43rem)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:grayscale(1) contrast(1.05)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(19,17,14,.88),rgba(19,17,14,0) 60%)}
+.hero .slab{position:relative;z-index:2;display:grid;grid-template-columns:auto 1fr;width:100%}
+.hero .tile{background:var(--red);color:#fff;padding:1.3rem var(--pad);display:flex;flex-direction:column;justify-content:flex-end;gap:.3rem;text-decoration:none;min-width:min(19rem,100%)}
+.hero .tile b{font-family:var(--display);font-stretch:125%;font-size:clamp(2.2rem,5vw,3.8rem);line-height:.9}
+.hero .tile:hover{background:var(--blue)}
+.hero h1{font-size:clamp(2.7rem,9vw,8.5rem);line-height:.86;padding:1.2rem var(--pad) .6rem}
+.hero .lede{padding:0 var(--pad) 1.4rem;color:var(--cream)}
+.hero .rings{position:absolute;z-index:2;width:clamp(6rem,18vw,15rem);right:var(--pad);top:var(--pad)}
+@media (max-width:700px){.hero .slab{grid-template-columns:1fr}.hero .slab>div{order:-1}.hero::before{background:linear-gradient(0deg,rgba(19,17,14,.94) 40%,rgba(19,17,14,.15) 85%)}.hero .lede{font-size:1.05rem}.hero>img{object-position:22% 40%}}
+@media (prefers-reduced-motion:no-preference){.hero .rings{animation:pop .9s cubic-bezier(.2,.8,.2,1) both}@keyframes pop{from{scale:.3;opacity:0}}}
+
+/* next up */
+.next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.next a{display:block;text-decoration:none;padding:1.4rem var(--pad);border-right:1px solid var(--line)}
+.next a:last-child{border-right:0}
+.next b{display:block;font-family:var(--display);font-stretch:125%;font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1}
+.next span{display:block}
+.next a:hover b{color:var(--red)}
+@media (max-width:760px){.next{grid-template-columns:1fr}.next a{border-right:0;border-bottom:1px solid var(--line)}.next a:last-child{border-bottom:0}}
+
+/* release: the machine */
+.relC{background:var(--night);color:var(--cream);display:grid;grid-template-columns:1.1fr 1fr}
+.relC .copy{padding:clamp(2rem,6vw,4.5rem) var(--pad);display:flex;flex-direction:column;justify-content:center;gap:1.4rem;min-width:0}
+.relC h2{font-size:clamp(2.4rem,7vw,6.2rem);line-height:.86}
+.relC h2 span{display:block}
+.relC h2 span:nth-child(2){color:var(--mustard)}
+.relC .when{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(1.3rem,2.6vw,2rem);color:var(--red);line-height:1}
+.relC .lede{color:var(--cream)}
+.relC .btn{background:var(--mustard);border-color:var(--mustard);color:var(--night)}
+.relC .btn.ghost{background:transparent;border-color:var(--cream);color:var(--cream)}
+.relC .btn:hover{background:var(--red);border-color:var(--red);color:#fff}
+.relC .img{position:relative;overflow:hidden;min-height:22rem}
+.relC .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.relC .img::after{content:"";position:absolute;inset:0;background:var(--blue);mix-blend-mode:color;opacity:.6}
+@media (max-width:820px){.relC{grid-template-columns:1fr}.relC .img{min-height:0;aspect-ratio:1}}
+
+/* shelf */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:clamp(1rem,3vw,2rem)}
+.shelf a{text-decoration:none}
+.shelf img{aspect-ratio:1;object-fit:cover;width:100%}
+.shelf .cap{display:flex;justify-content:space-between;margin-top:.6rem;font-weight:600}
+.headrow{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
+
+/* live strip */
+.strip{display:grid;grid-template-columns:2fr 1fr 1.5fr;gap:4px;background:var(--night)}
+.strip img{width:100%;height:clamp(220px,34vw,460px);object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.strip img.dan{object-position:38% 40%}
+@media (max-width:700px){.strip{grid-template-columns:1fr}.strip img{height:60vw}}
+
+/* press */
+.press{background:var(--paper2);border-bottom:1px solid var(--line)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2.2rem 3rem;margin-top:2rem}
+.quotes figure{margin:0;padding-left:1rem;border-left:4px solid var(--c,var(--blue))}
+.quotes blockquote{margin:0 0 .6rem;font-style:italic;font-size:1.12rem;line-height:1.45}
+.quotes figcaption{font-weight:600;font-size:.9rem;color:var(--mute)}
+.bigquote{background:var(--red);color:#fff;padding:clamp(1.5rem,4vw,2.5rem);margin:2.5rem 0 0;position:relative;overflow:hidden}
+.bigquote blockquote{margin:0;font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(1.6rem,4.5vw,3.4rem);line-height:1;padding-right:4rem}
+.bigquote figcaption{color:var(--mustard);font-weight:600;margin-top:.8rem}
+.bigquote::after{content:"";position:absolute;right:-2.5rem;top:-2.5rem;width:9rem;aspect-ratio:1;border-radius:50%;background:var(--mustard)}
+
+/* motto */
+.motto{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(1.7rem,5vw,4rem);line-height:.98;color:transparent;-webkit-text-stroke:1.4px var(--ink);margin:0}
+.motto .r{-webkit-text-stroke-color:var(--red)}
+.motto .b{-webkit-text-stroke-color:var(--blue)}
+.motto-cap{display:flex;align-items:center;gap:.8rem;margin-top:1.2rem}
+.motto-cap::before{content:"";flex:none;width:3rem;height:.4rem;background:var(--blue)}
+.cocoband{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;border-bottom:1px solid var(--line)}
+.cocoband .rings{width:clamp(8rem,22vw,18rem)}
+@media (max-width:700px){.cocoband{grid-template-columns:1fr}.cocoband .rings{display:none}}
+
+/* players */
+.bandintro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,26rem);gap:clamp(1.5rem,5vw,4rem);align-items:start}
+.bandintro img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+@media (max-width:820px){.bandintro{grid-template-columns:1fr}}
+.players{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.player .ph{aspect-ratio:760/657;overflow:hidden}
+.player .ph img{width:100%;height:100%;object-fit:cover}
+.player .bar{padding:1rem 1.2rem 1.1rem;color:#fff}
+.player .bar h3{font-family:var(--body);font-weight:600;font-stretch:100%;font-size:1.5rem;letter-spacing:0}
+.player .bar .mono{text-transform:uppercase;opacity:.9;line-height:1.5;display:block;margin-top:.3rem}
+.player .bio{padding:1.2rem}
+@media (max-width:1000px){.players{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.players{grid-template-columns:1fr}}
+.studio{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;background:var(--night)}
+.studio img{width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:760px){.studio{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* albums */
+.album{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding:clamp(2rem,5vw,3.5rem) 0;border-top:1px solid var(--line)}
+.album img.cov{width:100%;aspect-ratio:1;object-fit:cover}
+.sides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.8rem 2.5rem;margin:1.8rem 0}
+.side h4{font-family:var(--body);font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin:0 0 .4rem;font-size:.95rem}
+.side ol{list-style:none;margin:0;padding:0}
+.side li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.8rem;padding:.28rem 0;border-bottom:1px solid var(--line)}
+.side li small{color:var(--mute);font-size:.82rem;margin-left:.35rem;white-space:nowrap}
+.side li .mono{color:var(--mute);font-variant-numeric:tabular-nums}
+.illus{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--night);margin-top:1rem}
+.illus img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.tracks{padding:0;margin:0 0 1.4rem;list-style:none;columns:2;column-gap:2rem}
+.tracks li{break-inside:avoid;border-bottom:1px solid var(--line);padding:.25rem 0}
+.credits{font-size:.95rem;color:var(--mute)}
+@media (max-width:760px){.album{grid-template-columns:1fr}.sides{grid-template-columns:1fr}.tracks{columns:1}}
+
+/* gigs */
+.rows{border-top:3px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(8rem,13rem) minmax(0,1fr);gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row .when{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:1.7rem;line-height:1}
+.tag{font-family:var(--mono);font-size:.72rem;background:var(--mustard);color:var(--night);padding:.1rem .45rem;margin-left:.5rem;vertical-align:middle;white-space:nowrap}
+@media (max-width:640px){.row{grid-template-columns:1fr;gap:.3rem}}
+
+/* media */
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(1rem,3vw,2rem)}
+.vframe{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--night);color:var(--cream)}
+.vframe img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.6)}
+.vframe .lbl{position:absolute;left:1rem;bottom:.9rem;right:1rem}
+.vframe .lbl b{display:block;font-family:var(--display);font-stretch:125%;font-size:1.3rem;line-height:1.05}
+.vframe .play{position:absolute;left:50%;top:44%;translate:-50% -50%;width:3.6rem;aspect-ratio:1;border-radius:50%;border:.35rem solid var(--mustard)}
+.gallery{columns:3 260px;column-gap:6px}
+.gallery figure{margin:0 0 6px;break-inside:avoid;position:relative}
+.gallery img{width:100%}
+.gallery figcaption{font-family:var(--mono);font-size:.72rem;color:var(--mute);padding:.3rem 0 .5rem}
+
+.uc{max-width:46rem;background:var(--mustard);color:var(--night)}
+.uc .stripes{height:1.1rem;background:repeating-linear-gradient(-45deg,var(--night) 0 .9rem,var(--mustard) .9rem 1.8rem)}
+.uc-body{display:flex;gap:1.2rem;align-items:center;padding:1.6rem clamp(1.2rem,4vw,2.2rem)}
+.uc-body .ring{width:3.2rem;height:3.2rem;border-width:.7rem;border-color:var(--night);flex:none;margin:0}
+.uc b{display:block;font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(1.8rem,5vw,3rem);line-height:.95}
+.uc p{margin:.5rem 0 0;max-width:30rem}
+/* about coco */
+.coco{display:grid;grid-template-columns:minmax(0,40rem) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.coco .body p:first-child{font-size:1.3rem;line-height:1.45}
+.coco h3{margin:2rem 0 .7rem;font-size:1.25rem}
+.dropcap{display:inline-grid;place-items:center;width:1.35em;height:1.35em;font-family:var(--display);font-weight:900;color:#fff;background:var(--red);margin-right:.18em;line-height:1;vertical-align:-.15em}
+.swan{aspect-ratio:1;position:sticky;top:5rem}
+.swan .c1{position:absolute;inset:0 22% 22% 0;border-radius:50%;background:var(--blue)}
+.swan .c2{position:absolute;inset:34% 0 0 34%}
+.swan .c3{position:absolute;width:26%;aspect-ratio:1;border-radius:50%;background:var(--red);left:28%;top:28%}
+.facts{list-style:none;padding:0;margin:2rem 0 0;border-top:3px solid var(--ink)}
+.facts li{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.facts b{font-family:var(--display);font-stretch:125%;font-size:1.15rem}
+@media (max-width:820px){.coco{grid-template-columns:1fr}.swan{position:relative;top:0;max-width:300px}}
+
+/* shop */
+.shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:clamp(1.2rem,3vw,2.2rem)}
+.item img,.item .merch{aspect-ratio:1;width:100%;object-fit:cover}
+.item .merch{display:grid;place-items:center;color:#fff;font-family:var(--display);font-stretch:125%;font-weight:900;font-size:2.4rem}
+.item h3{font-family:var(--body);font-stretch:100%;font-weight:600;font-size:1.25rem;margin:.7rem 0 .1rem;letter-spacing:0}
+.item .price{font-weight:600;margin:.2rem 0 .7rem}
+.item .btn{width:100%;text-align:center}
+.item .btn[disabled]{background:transparent;color:var(--mute);border-color:var(--line);cursor:default}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40;display:none}.scrim.open{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--paper);z-index:50;border-left:1px solid var(--line);transform:translateX(100%);visibility:hidden;transition:transform .3s ease,visibility .3s;display:flex;flex-direction:column;padding:calc(1.2rem + env(safe-area-inset-top,0px)) 1.4rem calc(1.2rem + env(safe-area-inset-bottom,0px))}
+.drawer.open{transform:none;visibility:visible}
+@media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+.drawer header{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--ink);padding-bottom:.6rem}
+.lines{flex:1;overflow:auto;list-style:none;margin:0;padding:0}
+.lines li{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.qty{display:flex;gap:.35rem;align-items:center}
+.qty button{border:1.5px solid var(--ink);width:1.8rem;height:1.8rem;font-weight:700}
+.total{display:flex;justify-content:space-between;font-weight:600;font-size:1.2rem;padding:1rem 0}
+
+footer{background:var(--night);color:var(--cream);padding:clamp(2.5rem,6vw,4rem) var(--pad);display:grid;grid-template-columns:2fr 1.3fr 1fr;gap:2rem}
+footer .big{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(1.8rem,5vw,3.6rem);line-height:.9;margin:0}
+footer a{color:var(--cream)}
+footer ul{list-style:none;margin:0;padding:0;line-height:1.9}
+footer .sel{user-select:all;font-family:var(--mono);font-size:.9rem}
+footer .flag{display:flex;gap:.4rem;margin-top:1.2rem;align-items:center}
+footer .flag i{display:block;height:.55rem}
+@media (max-width:760px){footer{grid-template-columns:1fr}}
+
+/* limbokolia game */
+.gwrap{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:clamp(1rem,3vw,2rem);padding:0 var(--pad);align-items:start}
+.board{position:relative;box-shadow:0 18px 40px -20px rgba(0,0,0,.5);user-select:none;-webkit-user-select:none}
+.board img{width:100%;height:auto}
+#pcs,#forks{position:absolute;inset:0}#pcs{pointer-events:none}
+.pc{position:absolute;width:5.2%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;display:grid;place-items:center;background:#F1ECDD;border:3px solid var(--c);font-size:clamp(.7rem,2.3vw,1.35rem);line-height:1;box-shadow:0 3px 6px rgba(0,0,0,.45);transition:left .17s ease,top .17s ease;z-index:1}
+.pc.now{z-index:2;outline:3px solid #fff;outline-offset:1px}
+.fork{position:absolute;width:6%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;border:4px solid var(--mustard);background:rgba(230,169,34,.35);z-index:3}
+@media (prefers-reduced-motion:no-preference){.fork{animation:glow 1s ease-in-out infinite alternate}.pc.now{animation:bob 1s ease-in-out infinite alternate}
+ @keyframes glow{to{scale:1.3;background:rgba(230,169,34,.7)}}@keyframes bob{to{outline-color:var(--mustard)}}}
+.gpanel{border-top:3px solid var(--ink);padding-top:1rem;position:sticky;top:calc(64px + env(safe-area-inset-top,0px))}
+.gpanel h3{font-size:1.5rem}
+.who{display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem}
+.tok{width:2.6rem;height:2.6rem;flex:none;border-radius:50%;border:3px solid var(--c);background:#F1ECDD;display:grid;place-items:center;font-size:1.25rem;line-height:1}
+.tok.sm{width:1.9rem;height:1.9rem;font-size:.95rem;border-width:2.5px}
+.plist{display:grid;gap:.55rem;margin-top:.8rem}
+.prow{display:flex;gap:.6rem;align-items:center}
+.prow input{flex:1;min-width:0;font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1.5px solid var(--ink);padding:.3rem 0}
+.prow .x{font-size:1.4rem;padding:0 .4rem}
+.rollrow{display:flex;gap:1rem;align-items:center;min-height:4rem}
+.die{flex:none;width:3.6rem;height:3.6rem;background:#F1ECDD;border:2.5px solid #13110E;border-radius:.6rem;display:grid;grid-template-columns:repeat(3,1fr);padding:.45rem;gap:.12rem}
+.die i{border-radius:50%}.die i.on{background:#13110E}
+.gmsg{margin:0;font-weight:500;line-height:1.35}
+.act{margin:1rem 0}
+.btn.big{font-size:1.2rem;padding:.9rem 1.6rem;width:100%}
+.nums{display:grid;grid-template-columns:repeat(6,1fr);gap:.35rem}.nums .btn{padding:.6rem 0;text-align:center}
+.standing{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.standing li{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:center;padding:.4rem 0;border-bottom:1px solid var(--line)}
+.standing li.now span:nth-child(2){font-weight:600}
+.btn.gong{background:var(--mustard);border-color:var(--mustard);color:#13110E;width:100%}
+.linkish{margin-top:.9rem;text-decoration:underline;color:var(--mute);font-size:.9rem}
+.grules summary{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:1.6rem;cursor:pointer;margin-top:1rem}
+.grules ol{max-width:40rem;padding-left:1.3rem}.grules li{margin:.35rem 0}
+@media (max-width:520px){.top{gap:.5rem}.cartbtn{font-size:0;padding:.2rem .45rem}.cartbtn b{font-size:.8rem;margin-left:0}.fork{width:8.5%}}
+@media (max-width:860px){.gwrap{grid-template-columns:1fr;padding:0}.board{box-shadow:none}.gpanel{position:static;padding:1rem var(--pad) 0}}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<a href="#main" class="vh">Skip</a>
+<header class="top">
+  <a class="logo" href="#start"><span class="ring" aria-hidden="true"></span>COCO CHATRU<span class="full">&nbsp;QUARTET</span></a>
+  <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="nav"></button>
+  <nav class="main" id="nav"></nav>
+  <div class="tools">
+    <div class="lang" role="group" aria-label="Language"><button data-lang="sv">SV</button><button data-lang="en">EN</button></div>
+    <button class="cartbtn" id="cartBtn"></button>
+  </div>
+</header>
+<noscript><div style="padding:2rem 1rem;max-width:40rem;margin:auto">
+<h1>Coco Chatru Quartet</h1>
+<p>Egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor, i den legendariska äventyraren Coco Chatrus fotspår.</p>
+<p>Linus Kåse (altsax), Charlie Malmberg (barytonsax), Håkan Trygger (kontrabas), Daniel Kåse (trummor).</p>
+<p>Skivor på Trygger Music: Future (2024), Limbokolia (2025), Lost Christmas (2025), Metropolis (dubbel-LP, november 2026).</p>
+<p>Bokning: cocochatru@gmail.com. Press: Trygger Music, hakan@faethon.se.</p></div></noscript>
+<main id="main" tabindex="-1"></main>
+<footer id="foot"></footer>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="cartTitle"></aside>
+
+<script>
+const IMG = {"band": "img/band.jpg", "live_gm2": "img/live_gm2.jpg", "live_1150": "img/live_1150.jpg", "metro_front": "img/metro_front.jpg", "moloch": "img/moloch.jpg", "robot": "img/robot.jpg", "p_linus": "img/p_linus.jpg", "p_charlie": "img/p_charlie.jpg", "p_hakan": "img/p_hakan.jpg", "p_daniel": "img/p_daniel.jpg", "c_future": "img/c_future.jpg", "c_limbo": "img/c_limbo.jpg", "c_lost": "img/c_lost.jpg", "s_daniel_vib": "img/s_daniel_vib.jpg", "s_linus": "img/s_linus.jpg", "s_hakan": "img/s_hakan.jpg", "s_charlie": "img/s_charlie.jpg", "tee": "img/tee.jpg", "limbo_board": "img/limbo_board.jpg"};
+
+
+const MEMBERS = [
+  {name:"Linus Kåse", img:"p_linus", color:"var(--red)",
+   inst:{sv:"Altsax · Sopransax · Tenorsax · Keyboard",en:"Alto sax · Soprano sax · Tenor sax · Keyboard"},
+   bio:{sv:"Flitigt anlitad saxofonist och inspelningstekniker, verksam både som jazzmusiker och i flera andra genrer. Har spelat in, mixat och mastrat alla kvartettens skivor.",
+        en:"An in-demand saxophonist and recording engineer, active in jazz and many other genres. Has recorded, mixed and mastered all of the quartet's albums."}},
+  {name:"Charlie Malmberg", img:"p_charlie", color:"var(--blue)",
+   inst:{sv:"Barytonsax · Piano · Keyboard",en:"Baritone sax · Piano · Keyboard"},
+   bio:{sv:"Mångsidig musiker som i många år varit verksam både inom svensk jazz och inom teatermusik.",
+        en:"A versatile musician with many years in Swedish jazz and theatre music."}},
+  {name:"Håkan Trygger", img:"p_hakan", color:"var(--mustard)", dark:true,
+   inst:{sv:"Kontrabas · Slagverk",en:"Double bass · Percussion"},
+   bio:{sv:"Kontrabasist med många års erfarenhet som bland annat driver experimentella projekt i gränslandet mellan musik och andra estetiska uttryck.",
+        en:"A double bassist with many years' experience who also runs experimental projects on the border between music and other art forms."}},
+  {name:"Daniel Kåse", img:"p_daniel", color:"var(--night)",
+   inst:{sv:"Trummor · Vibrafon · Slagverk · Trumpet",en:"Drums · Vibraphone · Percussion · Trumpet"},
+   bio:{sv:"Till vardags stämledare för slagverkssektionen i Kungliga Filharmonikerna, men även en flink jazztrumslagare.",
+        en:"Principal percussionist of the Royal Stockholm Philharmonic by day, and a nimble jazz drummer."}}
+];
+
+const R="var(--red)", B="var(--blue)", M="var(--mustard)", W="var(--cream);box-shadow:inset 0 0 0 1.5px var(--ink)";
+const ALBUMS = [
+  {id:"metropolis", title:"Metropolis", img:"metro_front", year:"2026", cat:"TM5",
+   fmt:{sv:"Dubbel-LP · släpps i november 2026",en:"Double LP · out November 2026"},
+   text:{sv:"Fjärde albumet, inspirerat av Fritz Langs sci-fi-klassiker men fristående från filmen. Kvartetten skrev en massa musik som skulle kunna fungera som filmmusik och låste sedan in sig i Gul & blå på Konserthuset i tre dagar, för att ge sig på den som de alltid gör: som en jazz- och improvisationsorkester. Soundet är bredare än förut. Den ackordlösa kärnan finns kvar, men här byter alla instrument: piano, keyboards, vibrafon, rototoms och kedjor.",
+         en:"The fourth album, inspired by Fritz Lang's sci-fi classic but standing on its own. The quartet wrote a pile of music that could work as film score, then locked themselves into the Gul & blå room at the Stockholm Concert Hall for three days and played it the way they always do: as a jazz and improvising band. The sound is wider than before. The chordless core is still there, but everyone swaps instruments: piano, keyboards, vibraphone, rototoms and chains."},
+   credits:{sv:"Inspelad i Konserthuset, Stockholm, 31/7–2/8 2026. Producerad av Coco Chatru Quartet. Inspelning, mix och master: Linus Kåse. Omslagsdesign: Charlie Malmberg. Illustrationer: Knut Larsson.",
+            en:"Recorded at the Stockholm Concert Hall, 31 July to 2 August 2026. Produced by Coco Chatru Quartet. Recording, mix and master: Linus Kåse. Cover design: Charlie Malmberg. Illustrations: Knut Larsson."},
+   sides:[
+    {k:"A",c:R,t:[["The Machine City","Trygger","1:49"],["The Underworld","D Kåse","2:58"],["Games","D Kåse","1:40"],["Freder at Play","Malmberg","2:41"],["Maria","D Kåse","4:48"],["Machines","D Kåse","3:09"]]},
+    {k:"B",c:B,t:[["Moloch","Trygger","5:57"],["The Father and the Thin Man","L Kåse","4:04"],["Flying Cars","Malmberg","2:57"],["Map of the Dead Man","L Kåse","3:43"]]},
+    {k:"C",c:M,t:[["Yoshiwara","L Kåse","2:34"],["The Club","Trygger","2:29"],["Machine Maria Dances","Trygger","5:46"],["The Catacombs","L Kåse","4:26"]]},
+    {k:"D",c:W,t:[["Delirium","L Kåse","6:42"],["Return to the Underworld","Trygger","1:59"],["Death to the Machines","L Kåse","2:28"],["Final Battle","Trygger","4:48"]]}],
+   spotify:null},
+  {id:"lost", title:"Lost Christmas", img:"c_lost", year:"2025", cat:"TM4",
+   credits:{sv:"Omslagsmålning: John Andersson.",en:"Cover painting: John Andersson."},
+   text:{sv:"Julmusik till Coco Chatrus förlorade film Lost Christmas (1932). Tretton spår, lekfulla och allvarliga på samma gång.",
+         en:"Christmas music for Coco Chatru's lost film Lost Christmas (1932). Thirteen tracks, playful and serious at once."},
+   tracks:["En juldröm","Tomtarnas midnatt","Coco rastar över isen","Prosten","Snöyra"],
+   spotify:"https://open.spotify.com/album/4bmM9TmQyPdHrN325lRLyu"},
+  {id:"limbo", title:"Limbokolia", img:"c_limbo", year:"2025", cat:"TM2",
+   text:{sv:"Efter en lunchkonsert kom en äldre dam fram till bandet och berättade att hon som ung varit på upptäcktsresa med Coco Chatru. De sökte en plats som i legenderna kallas Limbokolia, där alla som vi längtar efter väntar på oss. Skivan följer resan dit: från Madrid och Zinkmannens skafferi, med ångfartyget SPIF över oceanen, via klätterträd, vattenrutschkana och en filminspelning i en källare, till en bolero över prärien. I fodralet ligger Limbokolia, brädspelet.",
+         en:"After a lunchtime concert an elderly lady came up to the band and said that in her youth she had been on an expedition with Coco Chatru. They were looking for a place the legends call Limbokolia, where everyone we long for is waiting for us. The album follows the journey there: from Madrid and the Zinc Man's pantry, across the ocean on the steamship SPIF, by way of a climbing tree, a waterslide and a film shoot in a cellar, to a bolero across the prairie. Inside the sleeve is Limbokolia, the board game."},
+   credits:{sv:"Inspelad en lördag i Gul & blå på Konserthuset, Stockholm. Inspelning, mixning, master: Linus Kåse. Framsida: The Teacher H.P. Lovecraft av John Andersson. Foto av konsten: Harald Lindström. Foton av bandet: Conny Fridh. Spelillustrationer: Knut Larsson. Omslagsdesign: Håkan Trygger.",
+            en:"Recorded on a Saturday in Gul & blå at the Stockholm Concert Hall. Recording, mixing, master: Linus Kåse. Cover: The Teacher H.P. Lovecraft by John Andersson. Art photography: Harald Lindström. Band photos: Conny Fridh. Game illustrations: Knut Larsson. Cover design: Håkan Trygger."},
+   sides:[
+    {k:"A",c:R,t:[["Tuggummi, sol och betong","Trygger","3:17"],["Zinkmannens skafferi","Trygger","6:38"],["SPIF","L Kåse","4:36"],["Ormen med giget","Trygger","3:22"],["Klätterträd","Malmberg","4:18"]]},
+    {k:"B",c:B,t:[["Cikadan och turturduvan","Trygger","3:52"],["Waterslide","D Kåse","4:10"],["Trubbel i källaren","Trygger","5:24"],["Cocos Bolero","L Kåse","5:34"],["Melancholia","Duke Ellington","2:30"]]}],
+   spotify:"https://open.spotify.com/search/Coco%20Chatru%20Quartet%20Limbokolia"},
+  {id:"future", title:"Future", img:"c_future", year:"2024", cat:"TM1",
+   text:{sv:"Debutalbumet, tillägnat Coco Chatru. Alla låttitlar kommer från breven hon skickade hem från sina äventyr, brev som bandet en gång fick läsa och nu bara kan återvända till via minnet. Flapjack är avfärden och den sista pannkakan. Sedan följer en cykeltur genom djungeln med ett hemligt budskap på pakethållaren, en kampsång vid en lägereld, ett blixtnedslag i tropikerna, kosmos i en daggdroppe, en cyklon på ett lyxfartyg och en dykexpedition på barriärrevet.",
+         en:"The debut, dedicated to Coco Chatru. Every title comes from the letters she sent home from her adventures, letters the band once got to read and can now only return to from memory. Flapjack is the departure and the last pancake. Then come a bicycle ride through the jungle with a secret message on the rack, a fighting song by a campfire, a lightning strike in the tropics, the cosmos in a dewdrop, a cyclone aboard a luxury liner and a diving expedition on the barrier reef."},
+   credits:{sv:"Inspelad i Kåse Studios, Stockholm. Inspelning, mixning, master: Linus Kåse. Konstverket Future: John Andersson. Omslagsdesign: Håkan Trygger.",
+            en:"Recorded at Kåse Studios, Stockholm. Recording, mixing, master: Linus Kåse. The artwork Future: John Andersson. Cover design: Håkan Trygger."},
+   sides:[
+    {k:"A",c:R,t:[["Ner i djupet","Trygger","6:05"],["Kampsång","Trygger","5:14"],["Plötsligt händer det","L Kåse","5:06"],["Daggdroppe","D Kåse","4:57"]]},
+    {k:"B",c:B,t:[["Flapjack","D Kåse","5:32"],["Tillbaka till hytten","L Kåse","6:09"],["Paubrazil","Trygger","4:24"],["På flykt (x) genom djungeln","Trygger","4:01"]]}],
+   spotify:"https://open.spotify.com/search/Coco%20Chatru%20Quartet%20Future"}
+];
+
+const PRESS = [
+  {q:"En kvartett som är stilbemästrande, utan att låta sig bli insnärjd i förutsägbarheter; elegant, men samtidigt påtagligt energifylld.", who:"Henrik Lång, Orkesterjournalen", c:B},
+  {q:"I en tid då jazz ofta förknippas med tradition eller experiment, träder Coco Chatru Quartet fram som något helt annat: ett band som förenar berättande, mytologi och musikalisk lekfullhet.", who:"Kary Persson, Jazzporten", c:M},
+  {q:"This recording is a fun journey! The mostly chordless arrangements have lots of space, but Håkan Trygger's bass playing outlines all of harmonies nicely.", who:"Mike & Russ, Adult Music", c:"var(--ink)"},
+  {q:"Lekfull och ytterst levande. När jag lyssnar på den här skivan känns det som att jag kommer lika nära som om jag satt och duckade för instrumenten på det extremt intima Glen Miller Café.", who:"Timo Kangas, Lira", c:R},
+  {q:"Särskilt förtjust är jag över Linus Kåses flödande altsax.", who:"Leif Carlsson, Lira", c:B},
+  {q:"Un álbum envuelto en una cautivadora elegancia, no exenta de energía cuando así se necesita.", who:"La Habitación del Jazz", c:M}
+];
+
+const GIGS = {
+  upcoming:[
+    {when:{sv:"Sön 11 okt",en:"Sun 11 Oct"}, what:"Engelen", place:{sv:"Stockholm. Under Stockholm Jazz Festival",en:"Stockholm. During Stockholm Jazz Festival"}},
+    {when:{sv:"November",en:"November"}, prel:true, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:{sv:"Bio Capitol, Stockholm. 9–10 eller 16–17 november",en:"Bio Capitol, Stockholm. 9–10 or 16–17 November"}},
+    {when:{sv:"November",en:"November"}, what:{sv:"Skivsläpp: Metropolis, dubbel-LP",en:"Album release: Metropolis, double LP"}, place:{sv:"Trygger Music. Datum och plats meddelas",en:"Trygger Music. Date and venue to be announced"}}
+  ],
+  past:[
+    {when:{sv:"6 okt 2026",en:"6 Oct 2026"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:{sv:"Bio Capitol, Stockholm. Metropolisfestivalen",en:"Bio Capitol, Stockholm. The Metropolis festival"}},
+    {when:{sv:"4 okt 2026",en:"4 Oct 2026"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:{sv:"Bio Capitol, Stockholm. Metropolisfestivalen",en:"Bio Capitol, Stockholm. The Metropolis festival"}},
+    {when:{sv:"16 dec 2025",en:"16 Dec 2025"}, what:"Glenn Miller Café", place:"Stockholm"},
+    {when:{sv:"12 dec 2025",en:"12 Dec 2025"}, what:{sv:"Juljazz och skräcksagor",en:"Christmas jazz and horror tales"}, place:"Ö2"},
+    {when:{sv:"6 dec 2025",en:"6 Dec 2025"}, what:"NK", place:{sv:"Julkonsert",en:"Christmas concert"}},
+    {when:{sv:"29 nov 2025",en:"29 Nov 2025"}, what:{sv:"Julkonsert och släpp av Lost Christmas",en:"Christmas concert and Lost Christmas release"}, place:"Djungel & Jazz, Stockholm"},
+    {when:{sv:"13 nov 2025",en:"13 Nov 2025"}, what:"Hotell Hellsten", place:"Stockholm"},
+    {when:"2025", what:{sv:"Specialframträdande med tre poeter",en:"Special performance with three poets"}, place:{sv:"Musikaliska Kvarteret, Stockholms litteraturmässa",en:"Musikaliska Kvarteret, Stockholm Literature Fair"}},
+    {when:"2024", what:{sv:"Premiär för Future",en:"Future debut"}, place:"Glenn Miller Café, Stockholm"}
+  ]
+};
+
+const PRODUCTS = [
+  {id:"lp-metro", name:"Metropolis", img:"metro_front", kind:{sv:"Dubbel-LP, släpps i november",en:"Double LP, out in November"}, price:375, pre:true},
+  {id:"lp-lost", name:"Lost Christmas", img:"c_lost", kind:"LP", price:250},
+  {id:"lp-limbo", name:"Limbokolia", img:"c_limbo", kind:{sv:"LP, med brädspel",en:"LP, with board game"}, price:250},
+  {id:"lp-future", name:"Future", img:"c_future", kind:"LP", price:250},
+  {id:"tee", name:"T-shirt", img:"tee", kind:{sv:"Svart, med Limbokolia-omslaget",en:"Black, with the Limbokolia cover"}, price:300},
+  {id:"tote", name:{sv:"Tygkasse",en:"Tote bag"}, kind:{sv:"Bomull",en:"Cotton"}, price:200, merch:"CCQ", color:B, soon:true},
+  {id:"cap", name:{sv:"Keps",en:"Cap"}, kind:"Coco Chatru Quartet", price:150, merch:"◎", color:R, soon:true}
+];
+
+const T = {
+ sv:{
+  nav:{start:"Start",players:"Musikerna",albums:"Skivor",gigs:"Spelningar",media:"Musik & video",coco:"Om Coco",limbokolia:"Spelet",shop:"Butik"},
+  menu:"Meny", cart:"Varukorg",
+  heroSub:"Egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor, i den legendariska äventyraren Coco Chatrus fotspår.",
+  nextLbl:"Härnäst", nextDay:"11 okt", nextWhere:"Engelen, Stockholm Jazz Festival",
+  next:[["Sön 11 okt","Engelen","Stockholm Jazz Festival"],["November","Metropolis på Bio Capitol","Preliminärt 9–10 eller 16–17/11"],["November","Skivsläpp: Metropolis","Dubbel-LP på Trygger Music"]],
+  relWhen:"Släpps i november 2026", relKind:"Trygger Music · TM5 · Dubbel-LP",
+  relText:"Både Fritz Langs film och Thea von Harbous roman utspelar sig 2026, det vill säga nu. Musiken skrevs som tänkbar filmmusik och hade premiär live till filmen på Bio Capitol i oktober. Nu kommer den på dubbelvinyl.",
+  preorder:"Förhandsbeställ", more:"Mer om skivan",
+  records:"Skivorna", allRecords:"Alla skivor", press:"Pressröster",
+  mottoCap:"Citat som tillskrivs Coco Chatru vid premiären av Metropolis",
+  readMore:"Vem var Coco Chatru?",
+  playersIntro:"Två saxofoner, kontrabas och trummor.",
+  playersText:["Coco Chatru Quartet spelar egenkomponerad jazz med fokus både på improvisation och utarbetade kompositioner. Musiken har rötter i den svängiga 50- och 60-talsjazzen men ett tydligt nutida sound, och låtarna är byggda för att stå öppna för improvisation och fritt ensemblespel.",
+               "Det finns många grupper med två saxofoner och komp, men kombinationen altsax och barytonsax är ovanlig och ger en speciell klang tillsammans med kontrabasen och trummorna. På Metropolis byter alla dessutom instrument."],
+  studio:"I studion", listen:"Lyssna", buy:"Köp skivan", selected:"Urval ur låtlistan", side:"Sida",
+  upcoming:"Kommande", past:"Tidigare", prel:"preliminärt",
+  mediaIntro:"Alla skivor finns på vinyl och på streamingtjänster som Spotify och Tidal.", stream:"Streama", ucH:"Under uppbyggnad", ucP:"Här kommer filmklipp och bilder. Tills vidare finns musiken på streamingtjänsterna ovan.",
+  cocoTitle:"Om Coco",
+  coco:["CCQ är döpt efter den legendariska äventyraren, primadonnan och uppfinnaren som kallade sig Coco Chatru.",
+        "Hennes dopnamn var Ann-Britt Olsson, eller möjligen Maj Gustavsson. Uppgifterna går isär. Enligt en källa föddes hon tio minuter efter midnatt den 1 januari 1900, enligt en annan på 1910-talet.",
+        "Som ung togs hon av sin mor med till biografer i Frankrike där det visades expressionistiska stumfilmer. En av dem, Future, såg hon bara en gång. Den lämnade henne aldrig, utan blev kvar »laser-inpräntad på insidan av skallbenet strax ovanför ögonhålorna«. Filmen visade henne att det fanns en annan värld, strax bortom »vardagens yta«.",
+        "En molnig torsdag i mars 1950 ömsade hon skinn och blev Coco Chatru. Hon fällde upp sitt paraply och vandrade bort.",
+        "Därefter hördes hon bara av brevledes. Breven berättar om expeditioner i djuphaven, roulettspel med gangstrar i skyskrapor, märkliga tebjudningar långt ner i katakomberna under metropolen, månskensnätter på Pampas och blänkande dolkar i lägereldarnas sken. Hon undertecknade dem »För alltid mot Future«. Ordet betydde inte bara framtid för henne, utan en ideal dimension bortom »det reala livets tröga gröt«.",
+        "Vid premiären av Metropolis i Berlin 1927 sägs hon ha varit chaufför åt filmstjärnan Brigitte Helm. Hon körde en motorcykel med en grandios sidovagn i form av en svan, som hon själv hade konstruerat."],
+  cocoBandH:"Kvartetten och Coco",
+  cocoBand:"Musiken utgår från legenderna om Coco, och varje skiva följer ett av hennes spår:", cocoArt:"Omslagen till Future, Limbokolia och Lost Christmas pryds av målningar av serietecknaren och surrealisten John Andersson (1960–2023), som kvartetten samarbetade med.",
+  trails:[["Future","Breven hon skickade hem, som bandet minns dem."],["Limbokolia","Resan till platsen där alla vi längtar efter väntar."],["Lost Christmas","Den förlorade julfilmen från 1932."],["Metropolis","Berlin 1927 och staden som utspelar sig nu."]],
+  shopIntro:"Vinyl direkt från bandet, plus lite merch.", add:"Lägg i varukorgen", addPre:"Förhandsbeställ", soon:"Kommer snart", kr:"kr", draftPrices:"priser: utkast",
+  empty:"Varukorgen är tom. Börja med en skiva.", total:"Summa", checkout:"Till kassan",
+  checkoutNote:"Kassan är inte kopplad än. Beställningar öppnar när betalningen är på plats.", close:"Stäng", added:"Lagd i varukorgen",
+  fBook:"Bokning", fPress:"Press och skivbolag"
+ },
+ en:{
+  nav:{start:"Home",players:"Players",albums:"Albums",gigs:"Gigs",media:"Music & video",coco:"About Coco",limbokolia:"Game",shop:"Shop"},
+  menu:"Menu", cart:"Cart",
+  heroSub:"Original jazz for alto sax, baritone sax, double bass and drums, on the trail of the legendary adventurer Coco Chatru.",
+  nextLbl:"Next up", nextDay:"11 Oct", nextWhere:"Engelen, Stockholm Jazz Festival",
+  next:[["Sun 11 Oct","Engelen","Stockholm Jazz Festival"],["November","Metropolis at Bio Capitol","Provisionally 9–10 or 16–17 Nov"],["November","Album release: Metropolis","Double LP on Trygger Music"]],
+  relWhen:"Out November 2026", relKind:"Trygger Music · TM5 · Double LP",
+  relText:"Both Fritz Lang's film and Thea von Harbou's novel are set in 2026, which is to say now. The music was written as would-be film score and premiered live to the film at Bio Capitol in October. Now it arrives on double vinyl.",
+  preorder:"Pre-order", more:"More about the album",
+  records:"The records", allRecords:"All albums", press:"Press",
+  mottoCap:"Quote attributed to Coco Chatru at the premiere of Metropolis",
+  readMore:"Who was Coco Chatru?",
+  playersIntro:"Two saxophones, double bass and drums.",
+  playersText:["Coco Chatru Quartet plays original jazz with equal weight on improvisation and worked-out composition. The music is rooted in the swinging jazz of the 50s and 60s but sounds clearly of today, and the tunes are built to stay open for improvisation and free ensemble playing.",
+               "Plenty of groups have two saxophones and a rhythm section, but alto with baritone is an unusual pairing, and it gives a particular sound together with the double bass and drums. On Metropolis everyone swaps instruments as well."],
+  studio:"In the studio", listen:"Listen", buy:"Buy the record", selected:"From the track list", side:"Side",
+  upcoming:"Upcoming", past:"Past", prel:"provisional",
+  mediaIntro:"All albums are out on vinyl and on streaming services such as Spotify and Tidal.", stream:"Stream", ucH:"Under construction", ucP:"Video clips and photos are on their way. Until then, the music is on the streaming services above.",
+  cocoTitle:"About Coco",
+  coco:["CCQ is named after the legendary adventurer, prima donna and inventor who called herself Coco Chatru.",
+        "Her given name was Ann-Britt Olsson, or possibly Maj Gustavsson. Accounts differ. One source has her born ten minutes after midnight on 1 January 1900, another some time in the 1910s.",
+        "As a girl she was taken by her mother to cinemas in France that showed expressionist silent films. One of them, Future, she saw only once. It never left her, but stayed \"laser-imprinted on the inside of the skull, just above the eye sockets\". The film showed her there was another world, just beyond \"the surface of the everyday\".",
+        "On a cloudy Thursday in March 1950 she shed her skin and became Coco Chatru. She opened her umbrella and walked away.",
+        "After that she was heard from only by letter. The letters tell of expeditions in the deep seas, roulette with gangsters in skyscrapers, strange tea parties far down in the catacombs beneath the metropolis, moonlit nights on the Pampas and daggers glinting in the light of campfires. She signed them \"Forever towards Future\". To her the word meant more than the time ahead: an ideal dimension beyond \"the sluggish porridge of real life\".",
+        "At the Berlin premiere of Metropolis in 1927 she is said to have been chauffeur to the film star Brigitte Helm. She drove a motorcycle with a grandiose swan-shaped sidecar of her own design."],
+  cocoBandH:"The quartet and Coco",
+  cocoBand:"The music starts from the legends about Coco, and each album follows one of her trails:", cocoArt:"The covers of Future, Limbokolia and Lost Christmas carry paintings by the cartoonist and surrealist John Andersson (1960–2023), whom the quartet worked with.",
+  trails:[["Future","The letters she sent home, as the band remembers them."],["Limbokolia","The journey to the place where everyone we long for is waiting."],["Lost Christmas","The lost Christmas film from 1932."],["Metropolis","Berlin 1927, and the city whose story is set now."]],
+  shopIntro:"Vinyl straight from the band, plus a little merch.", add:"Add to cart", addPre:"Pre-order", soon:"Coming soon", kr:"SEK", draftPrices:"prices: draft",
+  empty:"Your cart is empty. Start with a record.", total:"Total", checkout:"Checkout",
+  checkoutNote:"Checkout isn't connected yet. Orders open once payment is set up.", close:"Close", added:"Added to cart",
+  fBook:"Booking", fPress:"Press and label"
+ }
+};
+
+/* state */
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let lang=store.get("ccq-lang","sv"), cart=store.get("ccq-cart",{});
+if(lang!=="sv"&&lang!=="en")lang="sv";
+Object.keys(cart).forEach(id=>{if(!PRODUCTS.some(p=>p.id===id))delete cart[id]});
+const L=o=>(o&&typeof o==="object"&&!Array.isArray(o)&&("sv" in o))?o[lang]:o;
+const t=k=>T[lang][k];
+const $=s=>document.querySelector(s);
+const img=(k,alt="",cls="")=>`<img src="${IMG[k]}" alt="${alt}" ${cls?`class="${cls}"`:""} loading="lazy">`;
+const motto=`<p class="motto">THE <span class="r">MACHINES</span> ARE COMING. BEWARE NOT TO MAKE ALL <span class="b">HUMANS</span> IN THEIR IMAGE!</p>`;
+const sidesHTML=a=>`<div class="sides">${a.sides.map(s=>`<div class="side"><h4><span class="dot" style="background:${s.c}"></span>${t("side")} ${s.k}</h4><ol>${s.t.map(([n,c,d])=>`<li><span>${n}<small>(${c})</small></span><span class="mono">${d}</span></li>`).join("")}</ol></div>`).join("")}</div>`;
+const gigRow=g=>`<div class="row"><span class="when">${L(g.when)}</span><div><h3>${L(g.what)}${g.prel?`<span class="tag">${t("prel")}</span>`:""}</h3><span class="mute">${L(g.place)}</span></div></div>`;
+
+const views={
+ start:()=>`
+  <section class="hero">${img("band","Coco Chatru Quartet live")}<div class="rings" aria-hidden="true"></div>
+   <div class="slab">
+    <a class="tile" href="#gigs"><span class="mono">${t("nextLbl").toUpperCase()}</span><b>${t("nextDay").toUpperCase()}</b><span>${t("nextWhere")}</span></a>
+    <div><h1>COCO<br>CHATRU</h1><p class="lede">${t("heroSub")}</p></div>
+   </div>
+  </section>
+  <section class="next">${t("next").map(([d,w,x])=>`<a href="#gigs"><span class="mono mute">${d.toUpperCase()}</span><b>${w}</b><span class="mute">${x}</span></a>`).join("")}</section>
+  <section class="relC">
+   <div class="copy"><span class="mono" style="color:var(--mustard)">${t("relKind").toUpperCase()}</span>
+    <h2><span>METRO</span><span>POLIS</span></h2>
+    <p class="when">${t("relWhen")}</p>
+    <p class="lede">${t("relText")}</p>
+    <div class="actions"><a class="btn" href="#shop">${t("preorder")}</a><a class="btn ghost" href="#albums">${t("more")}</a></div></div>
+   <div class="img">${img("moloch","Moloch, illustration: Knut Larsson")}</div>
+  </section>
+  <section class="wrap" style="border-bottom:1px solid var(--line)">
+    <div class="headrow"><h2>${t("records")}</h2><a class="btn ghost" href="#albums">${t("allRecords")}</a></div>
+    <div class="shelf">${ALBUMS.map(a=>`<a href="#albums">${img(a.img,a.title)}<div class="cap"><span>${a.title}</span><span class="mono mute">${a.year}</span></div></a>`).join("")}</div>
+  </section>
+  <section class="strip" aria-hidden="true">${img("live_gm2")}${img("s_daniel_vib","","dan")}${img("live_1150")}</section>
+  <section class="wrap press">
+    <h2>${t("press")}</h2>
+    <div class="quotes">${PRESS.map(p=>`<figure style="--c:${p.c}"><blockquote>»${p.q}«</blockquote><figcaption>${p.who}</figcaption></figure>`).join("")}</div>
+    <figure class="bigquote"><blockquote>»…the jazz concept album is back!«</blockquote><figcaption>Gerry Hectic, You and the Music</figcaption></figure>
+  </section>
+  <section class="wrap cocoband">
+    <div>${motto}<p class="motto-cap mono">${t("mottoCap")}</p><a class="btn" style="margin-top:1.6rem" href="#coco">${t("readMore")}</a></div>
+    <div class="rings" aria-hidden="true"></div>
+  </section>`,
+
+ players:()=>`<section class="wrap"><h1 class="page">${t("nav").players}</h1>
+   <div class="measure"><p class="lede">${t("playersIntro")}</p>${t("playersText").map(p=>`<p>${p}</p>`).join("")}</div></section>
+  <section class="players">${MEMBERS.map(m=>`<article class="player">
+    <div class="ph">${img(m.img,m.name)}</div>
+    <div class="bar" style="background:${m.color};${m.dark?"color:var(--night)":""}"><h3>${m.name}</h3><span class="mono">${L(m.inst)}</span></div>
+    <div class="bio"><p>${L(m.bio)}</p></div></article>`).join("")}</section>
+  <section class="wrap" style="padding-bottom:1.5rem"><h2>${t("studio")}</h2><p class="mono mute" style="margin-top:.6rem">KONSERTHUSET, STOCKHOLM · 31/7–2/8 2026</p></section>
+  <section class="studio">${img("s_linus","Linus Kåse")}${img("s_charlie","Charlie Malmberg")}${img("s_hakan","Håkan Trygger")}${img("s_daniel_vib","Daniel Kåse")}</section>`,
+
+ albums:()=>`<section class="wrap"><h1 class="page">${t("nav").albums}</h1>
+  ${ALBUMS.map(a=>`<article class="album" id="${a.id}">
+    <div>${img(a.img,a.title,"cov")}${a.id==="metropolis"?`<div class="illus">${img("robot","Robot-Maria, Knut Larsson")}${img("moloch","Moloch, Knut Larsson")}</div>`:""}</div>
+    <div>
+      <h2>${a.title}</h2>
+      <p class="mono mute" style="margin-top:.6rem">${a.fmt?L(a.fmt).toUpperCase():a.year} · TRYGGER MUSIC${a.cat&&!a.fmt?" · "+a.cat:""}${a.fmt?" · "+a.cat:""}</p>
+      <p class="lede">${L(a.text)}</p>
+      ${a.sides?sidesHTML(a):`<p class="mono mute" style="margin-bottom:.3rem">${t("selected").toUpperCase()}</p><ul class="tracks">${a.tracks.map(x=>`<li>${x}</li>`).join("")}</ul>`}
+      ${a.credits?`<p class="credits">${L(a.credits)}</p>`:""}
+      <div class="actions"><a class="btn" href="#shop">${a.id==="metropolis"?t("preorder"):t("buy")}</a>
+      ${a.spotify?`<a class="btn ghost" target="_blank" rel="noopener" href="${a.spotify}">${t("listen")}</a>`:""}${a.id==="limbo"?`<a class="btn ghost" href="#limbokolia">◎ ${GT[lang].play}</a>`:""}</div>
+    </div></article>`).join("")}</section>`,
+
+ gigs:()=>`<section class="wrap"><h1 class="page">${t("nav").gigs}</h1>
+  <h2 style="margin-bottom:1rem">${t("upcoming")}</h2>
+  <div class="rows" style="margin-bottom:3.5rem">${GIGS.upcoming.map(gigRow).join("")}</div>
+  <h2 style="margin-bottom:1rem">${t("past")}</h2>
+  <div class="rows">${GIGS.past.map(gigRow).join("")}</div></section>`,
+
+ media:()=>`<section class="wrap"><h1 class="page">${t("nav").media}</h1><p class="lede">${t("mediaIntro")}</p>
+  <div class="actions" style="margin:1.5rem 0 3.5rem">${ALBUMS.filter(a=>a.spotify).map(a=>`<a class="btn ghost" target="_blank" rel="noopener" href="${a.spotify}">${t("stream")}: ${a.title}</a>`).join("")}</div>
+  <div class="uc" role="note"><div class="stripes" aria-hidden="true"></div><div class="uc-body"><span class="ring" aria-hidden="true"></span><div><b>${t("ucH")}</b><p>${t("ucP")}</p></div></div><div class="stripes" aria-hidden="true"></div></div></section>`,
+
+ coco:()=>{const c=t("coco");return `<section class="wrap"><h1 class="page">${t("cocoTitle")}</h1>
+  <div class="coco"><div class="body">
+    <p><span class="dropcap">C</span>${c[0]}</p>${c.slice(1).map(p=>`<p>${p}</p>`).join("")}
+    <div style="margin:2.5rem 0">${motto}<p class="motto-cap mono">${t("mottoCap")}</p></div>
+    <h3>${t("cocoBandH")}</h3><p>${t("cocoBand")}</p>
+    <ul class="facts">${t("trails").map(([a,b])=>`<li><b>${a}</b><span>${b}</span></li>`).join("")}</ul><p style="margin-top:1.6rem">${t("cocoArt")}</p>
+  </div><div class="swan" aria-hidden="true"><div class="c1"></div><div class="c2 rings"></div><div class="c3"></div></div></div></section>`},
+
+ limbokolia:()=>gameView(),
+
+ shop:()=>`<section class="wrap"><h1 class="page">${t("nav").shop}</h1>
+  <p class="lede" style="margin-bottom:2.5rem">${t("shopIntro")}</p>
+  <div class="shop">${PRODUCTS.map(p=>`<article class="item">
+    ${p.img?img(p.img,L(p.name)):`<div class="merch" style="background:${p.color}">${p.merch}</div>`}
+    <h3>${L(p.name)}</h3><span class="mute">${L(p.kind)}</span>
+    <p class="price">${p.price} ${t("kr")}</p>
+    ${p.soon?`<button class="btn" disabled>${t("soon")}</button>`:`<button class="btn" data-add="${p.id}">${p.pre?t("addPre"):t("add")}</button>`}</article>`).join("")}</div></section>`
+};
+
+/* ---------- Limbokolia board game ---------- */
+const GB = {"nodes":{"0":{"x":87.32,"y":4.13},"1":{"x":50.89,"y":95.7},"2":{"x":72.68,"y":20.14},"3":{"x":63.15,"y":31.33},"4":{"x":89.02,"y":15.15},"5":{"x":14.81,"y":25.47},"6":{"x":78.98,"y":56.63},"7":{"x":17.19,"y":75.9},"8":{"x":81.87,"y":4.48},"9":{"x":64.85,"y":67.13},"10":{"x":81.19,"y":33.39},"11":{"x":87.83,"y":46.3},"12":{"x":73.19,"y":60.24},"13":{"x":83.06,"y":14.29},"14":{"x":71.49,"y":97.93},"15":{"x":36.6,"y":96.04},"16":{"x":84.09,"y":92.08},"17":{"x":53.28,"y":61.62},"18":{"x":64.85,"y":60.41},"19":{"x":3.91,"y":67.13},"20":{"x":38.13,"y":66.61},"21":{"x":39.32,"y":39.41},"22":{"x":3.23,"y":19.97},"23":{"x":40.17,"y":45.44},"24":{"x":59.91,"y":43.03},"25":{"x":72.85,"y":47.33},"26":{"x":91.74,"y":10.5},"27":{"x":97.87,"y":58.86},"28":{"x":3.06,"y":38.04},"29":{"x":33.87,"y":54.91},"30":{"x":59.23,"y":34.94},"31":{"x":80.51,"y":43.03},"32":{"x":34.21,"y":61.1},"33":{"x":24.85,"y":85.2},"34":{"x":12.77,"y":18.59},"35":{"x":29.62,"y":27.54},"36":{"x":8.34,"y":86.57},"37":{"x":60.77,"y":98.11},"38":{"x":80.17,"y":69.36},"39":{"x":90.21,"y":59.55},"40":{"x":71.83,"y":36.66},"41":{"x":38.47,"y":32.7},"42":{"x":31.83,"y":76.08},"43":{"x":48.68,"y":63.34},"44":{"x":3.06,"y":9.81},"45":{"x":3.4,"y":58.0},"46":{"x":76.09,"y":33.39},"47":{"x":64.68,"y":44.92},"48":{"x":79.83,"y":28.06},"49":{"x":28.6,"y":22.72},"50":{"x":77.79,"y":47.16},"51":{"x":77.28,"y":51.64},"52":{"x":74.89,"y":40.62},"53":{"x":45.45,"y":35.11},"54":{"x":69.96,"y":42.69},"55":{"x":72.51,"y":69.71},"56":{"x":44.09,"y":93.46},"57":{"x":33.7,"y":43.55},"58":{"x":74.89,"y":25.99},"59":{"x":17.19,"y":95.52},"60":{"x":86.98,"y":34.6},"61":{"x":52.43,"y":70.57},"62":{"x":67.57,"y":33.73},"63":{"x":3.23,"y":47.33},"64":{"x":3.23,"y":29.78},"65":{"x":57.87,"y":38.55},"66":{"x":5.79,"y":78.66},"67":{"x":44.77,"y":66.78},"69":{"x":61.62,"y":72.12},"70":{"x":11.06,"y":92.25},"71":{"x":36.94,"y":49.74},"72":{"x":77.11,"y":6.2},"73":{"x":31.66,"y":83.48},"74":{"x":14.13,"y":9.98},"75":{"x":84.94,"y":30.46},"76":{"x":23.32,"y":17.56},"77":{"x":97.7,"y":67.64},"78":{"x":10.89,"y":5.68},"79":{"x":31.49,"y":32.7},"82":{"x":78.13,"y":11.7},"84":{"x":87.83,"y":69.36},"85":{"x":19.06,"y":20.31},"86":{"x":91.4,"y":51.64},"S":{"x":95.32,"y":4.56},"B":{"x":79.83,"y":74.01},"L":{"x":38.47,"y":77.54}},"next":{"S":["0","26"],"0":["8"],"8":["72"],"72":["82"],"26":["4"],"4":["13"],"13":["82"],"82":["2"],"2":["58"],"58":["48"],"48":["75"],"75":["60"],"60":["10"],"10":["46"],"46":["40"],"40":["62","52"],"62":["3"],"3":["30"],"30":["65"],"65":["24"],"24":["47"],"52":["54"],"54":["47"],"47":["25"],"25":["50","31"],"50":["51"],"51":["6"],"6":["39"],"39":["12"],"12":["18"],"18":["17"],"17":["43"],"43":["67"],"31":["11"],"11":["86"],"86":["27"],"27":["77"],"77":["84"],"84":["38"],"38":["55"],"55":["9"],"9":["69"],"69":["61"],"61":["67"],"67":["20"],"20":["32"],"32":["29"],"29":["71"],"71":["23"],"23":["57"],"57":["21"],"21":["53"],"53":["41"],"41":["79"],"79":["35"],"35":["49"],"49":["76"],"76":["85"],"85":["5"],"5":["34"],"34":["74"],"74":["78"],"78":["44"],"44":["22"],"22":["64"],"64":["28"],"28":["63"],"63":["45"],"45":["19"],"19":["66"],"66":["36"],"36":["70"],"70":["59"],"59":["33"],"33":["42"],"42":["73"],"73":["15"],"15":["56"],"56":["1"],"1":["37"],"37":["14"],"14":["16"],"16":["B"],"7":["66"]},"jump":{"58":"62","53":"65","79":"71","78":"7","47":"20","39":"25","27":"31","42":"20","33":"15"},"double":["2","9","18","37","51","76","85","86","84"]};
+const TOKENS=["💍","🐚","🪶","🎀","🔔","🧿","🗝️","🌰"];
+const PCOL=["#D33B2C","#1F4E9E","#E6A922","#2E7D4F","#7B3FA0","#13110E"];
+const GT={
+ sv:{title:"Limbokolia – spelet",
+  intro:"Brädspelet från skivan Limbokolia, nu spelbart här. Sätt på skivan, samla alla kring en skärm och turas om.",
+  album:"Sätt på skivan", rulesH:"Regler",
+  rules:["Starta skivan! Spelet slutar när gongen ljuder efter Cocos Bolero. Tryck då på gongknappen.","Den som slår högst börjar.","Landar du på samma ruta som en annan spelare får du skicka tillbaka hen lika många steg som du slog.","Dubbelringad ruta: slå 3 eller högre för att komma vidare, annars står du kvar.","Ruta med pil: följ pilen!","Vid ett vägskäl väljer du väg genom att trycka på en lysande ruta.","Nästan framme: välj ett tal. Slå tärningen på nästa tur. Får du ditt tal kommer du till Limbokolia, annars tillbaka till start.","Ljuder gongen medan du står i rutan Nästan framme går du direkt till Limbokolia. Först till Limbokolia vinner!"],
+  players:"Spelare", name:"Namn", player:"Spelare", add:"Lägg till spelare", remove:"Ta bort",
+  tokHint:"Tryck på pjäsen för att välja din minsta och finaste dekorationssak.",
+  start:"Starta spelet", rollOff:(r,w)=>`${r}. ${w} börjar!`,
+  turn:n=>`Din tur, ${n}`, roll:"Slå tärningen", rolled:(n,k)=>`${n} slog ${k}.`,
+  stuck:(n,k)=>`${n} slog ${k} på en dubbelringad ruta och står kvar.`,
+  arrow:"Följ pilen!", fork:"Välj väg: tryck på en lysande ruta.",
+  pick:"Nästan framme! Välj ett tal.", waiting:(n,k)=>`${n} väntar på en ${k}a.`, waitShort:k=>`väntar på ${k}`,
+  boxFail:(n,k,p)=>`${n} slog ${k}, inte ${p}. Tillbaka till start!`,
+  bump:(n,o,k)=>`${n} landade på ${o}. Skicka tillbaka ${k} steg?`, send:n=>`Skicka tillbaka ${n}`, skip:"Låt vara",
+  sent:(n,k)=>`${n} fick gå tillbaka ${k} steg.`,
+  gong:"Gongen ljöd!", gongSure:"Efter Cocos Bolero? Tryck igen",
+  win:n=>`${n} kom till Limbokolia!`, gongWin:n=>`Gongen! ${n} går direkt till Limbokolia!`,
+  nobody:"Gongen ljöd. Ingen kom till Limbokolia den här gången.",
+  again:"Spela igen", newGame:"Nytt spel", sureNew:"Avsluta spelet? Tryck igen",
+  atStart:"vid start", inBox:"nästan framme", there:"i Limbokolia", alt:"Spelplanen till Limbokolia, illustrerad",
+  play:"Spela brädspelet", and:" och "},
+ en:{title:"Limbokolia: the game",
+  intro:"The board game from the Limbokolia album, playable here. Put the album on, gather everyone around one screen and take turns.",
+  album:"Put the album on", rulesH:"Rules",
+  rules:["Start playing the album! The game ends when the gong sounds after Cocos Bolero. Tap the gong button when it does.","The highest roll starts.","If you land on the same space as another player, you can send them back as many steps as you rolled.","Double-ringed space: roll 3 or higher to move on, or stay in place.","Space with an arrow: follow the arrow!","At a fork, choose your way by tapping a glowing space.","Almost there: choose a number, then roll on your next turn. Roll your number and you reach Limbokolia; otherwise, back to Start.","If the gong sounds while you're in the Almost there box, go straight to Limbokolia. First to Limbokolia wins!"],
+  players:"Players", name:"Name", player:"Player", add:"Add player", remove:"Remove",
+  tokHint:"Tap the token to pick your smallest, finest decorative item.",
+  start:"Start game", rollOff:(r,w)=>`${r}. ${w} starts!`,
+  turn:n=>`${n}'s turn`, roll:"Roll the die", rolled:(n,k)=>`${n} rolled ${k}.`,
+  stuck:(n,k)=>`${n} rolled ${k} on a double-ringed space and stays put.`,
+  arrow:"Follow the arrow!", fork:"Choose your way: tap a glowing space.",
+  pick:"Almost there! Choose a number.", waiting:(n,k)=>`${n} is waiting for a ${k}.`, waitShort:k=>`waiting for ${k}`,
+  boxFail:(n,k,p)=>`${n} rolled ${k}, not ${p}. Back to Start!`,
+  bump:(n,o,k)=>`${n} landed on ${o}. Send them back ${k}?`, send:n=>`Send ${n} back`, skip:"Leave them",
+  sent:(n,k)=>`${n} goes back ${k} steps.`,
+  gong:"The gong sounded!", gongSure:"After Cocos Bolero? Tap again",
+  win:n=>`${n} reached Limbokolia!`, gongWin:n=>`The gong! ${n} goes straight to Limbokolia!`,
+  nobody:"The gong sounded. Nobody made it to Limbokolia this time.",
+  again:"Play again", newGame:"New game", sureNew:"End this game? Tap again",
+  atStart:"at Start", inBox:"almost there", there:"in Limbokolia", alt:"The Limbokolia game board, illustrated",
+  play:"Play the board game", and:" and "}
+};
+const g=k=>GT[lang][k];
+let game=store.get("ccq-game",null), setup=null, busy=false, forkResolve=null, armed=null;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const d6=()=>1+Math.floor(Math.random()*6);
+const cur=()=>game.players[game.turn];
+const pname=p=>p.name||`${g("player")} ${game.players.indexOf(p)+1}`;
+const saveGame=()=>store.set("ccq-game",game);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function say(fn,...a){game.msg=[fn,...a]}
+function msgText(){if(!game||!game.msg)return "";const[k,...a]=game.msg;const v=g(k);return typeof v==="function"?v(...a):v}
+
+function gameView(){return `<section class="wrap" style="padding-bottom:2rem">
+  <h1 class="page" style="font-size:clamp(2.6rem,8vw,6rem)">${g("title")}</h1>
+  <p class="lede">${g("intro")}</p>
+  <div class="actions"><a class="btn ghost" target="_blank" rel="noopener" href="https://open.spotify.com/search/Coco%20Chatru%20Quartet%20Limbokolia">${g("album")}</a></div></section>
+ <section class="gwrap">
+  <div class="board" id="board"><img src="${IMG.limbo_board}" alt="${g("alt")}"><div id="forks"></div><div id="pcs"></div></div>
+  <div class="gpanel" id="gpanel"></div>
+ </section>
+ <section class="wrap" style="padding-top:0"><details class="grules"><summary>${g("rulesH")}</summary><ol>${g("rules").map(r=>`<li>${r}</li>`).join("")}</ol></details></section>`}
+
+function gameMount(){ if(!game&&!setup) setup={players:[{name:"",tok:0},{name:"",tok:1}]}; drawPanel(); drawPieces() }
+
+function pos(id){const n=GB.nodes[id];return [n.x,n.y]}
+function drawPieces(){
+  const el=$("#pcs"); if(!el) return;
+  const fk=$("#forks"); fk.innerHTML=(game&&game.fork||[]).map(id=>{const[x,y]=pos(id);return `<button class="fork" data-fork="${id}" style="left:${x}%;top:${y}%" aria-label="${g("fork")}"></button>`}).join("");
+  if(!game){el.innerHTML="";return}
+  const groups={};game.players.forEach((p,i)=>(groups[p.pos]=groups[p.pos]||[]).push(i));
+  const sig=game.players.map(p=>p.tok+p.col).join();
+  if(el.dataset.sig!==sig){el.dataset.sig=sig;el.innerHTML=game.players.map((p,i)=>`<span class="pc" data-pc="${i}" style="--c:${p.col}">${p.tok}</span>`).join("")}
+  Object.entries(groups).forEach(([id,ids])=>{
+    const[x,y]=pos(id); const big=["S","B","L"].includes(id); const r=ids.length>1?(big?4.2:2.2):0;
+    ids.forEach((i,k)=>{const a=-Math.PI/2+k*2*Math.PI/ids.length;const s=el.querySelector(`[data-pc="${i}"]`);
+      s.style.left=(x+r*Math.cos(a))+"%";s.style.top=(y+r*Math.sin(a)*1.01)+"%";
+      s.classList.toggle("now",game.phase==="play"&&i===game.turn)})
+  });
+}
+const PIPS={1:[4],2:[0,8],3:[0,4,8],4:[0,2,6,8],5:[0,2,4,6,8],6:[0,2,3,5,6,8]};
+const dieHTML=n=>`<div class="die" aria-label="${n||""}">${Array.from({length:9},(_,i)=>`<i${n&&PIPS[n].includes(i)?' class="on"':""}></i>`).join("")}</div>`;
+
+function drawPanel(){
+  const el=$("#gpanel"); if(!el) return;
+  if(!game){
+    el.innerHTML=`<h3>${g("players")}</h3><p class="mute" style="font-size:.92rem">${g("tokHint")}</p>
+     <div class="plist">${setup.players.map((p,i)=>`<div class="prow"><button class="tok" data-tok="${i}" style="--c:${PCOL[i]}" aria-label="token">${TOKENS[p.tok]}</button>
+       <input data-name="${i}" value="${esc(p.name)}" placeholder="${g("player")} ${i+1}" aria-label="${g("name")}" maxlength="18">
+       ${setup.players.length>2?`<button class="x" data-rm="${i}" aria-label="${g("remove")}">×</button>`:""}</div>`).join("")}</div>
+     <div class="actions" style="margin-top:1rem">${setup.players.length<6?`<button class="btn ghost" id="gAdd">${g("add")}</button>`:""}<button class="btn" id="gStart">${g("start")}</button></div>`;
+    return;
+  }
+  const p=cur(), over=game.phase==="over";
+  const status=game.players.map((q,i)=>`<li class="${!over&&i===game.turn?"now":""}"><span class="tok sm" style="--c:${q.col}">${q.tok}</span><span>${esc(pname(q))}</span><span class="mono mute">${q.pos==="S"?g("atStart"):q.pos==="L"?g("there"):q.pos==="B"?(q.pick?g("waitShort")(q.pick):g("inBox")):""}</span></li>`).join("");
+  let act="";
+  if(over) act=`<button class="btn" id="gAgain">${g("again")}</button>`;
+  else if(game.pending==="pick") act=`<p><b>${g("pick")}</b></p><div class="nums">${[1,2,3,4,5,6].map(n=>`<button class="btn ghost" data-pick="${n}">${n}</button>`).join("")}</div>`;
+  else if(game.pending==="bump") act=`<div class="actions">${game.victims.map(i=>`<button class="btn" data-bump="${i}">${esc(g("send")(pname(game.players[i])))}</button>`).join("")}<button class="btn ghost" data-bump="-1">${g("skip")}</button></div>`;
+  else if(game.fork) act=`<p><b>${g("fork")}</b></p>`;
+  else act=`<button class="btn big" id="gRoll" ${busy?"disabled":""}>${g("roll")}</button>`;
+  el.innerHTML=`${over?"":`<div class="who"><span class="tok" style="--c:${p.col}">${p.tok}</span><h3>${esc(g("turn")(pname(p)))}</h3></div>`}
+   <div class="rollrow">${dieHTML(game.die)}<p class="gmsg" aria-live="polite">${esc(msgText())}</p></div>
+   <div class="act">${act}</div>
+   <ul class="standing">${status}</ul>
+   ${over?"":`<div class="actions" style="margin-top:1.2rem"><button class="btn gong" id="gGong">${armed==="gong"?g("gongSure"):"◎ "+g("gong")}</button></div>`}
+   <button class="linkish" id="gNew">${armed==="new"?g("sureNew"):g("newGame")}</button>`;
+}
+
+function startGame(){
+  const ps=setup.players.map((p,i)=>({name:p.name.trim(),tok:TOKENS[p.tok],col:PCOL[i],pos:"S",trail:["S"],pick:null}));
+  game={players:ps,turn:0,phase:"play",die:null,pending:null,fork:null,msg:null};
+  let pool=ps.map((_,i)=>i), parts=[];
+  while(pool.length>1){const r=pool.map(i=>[i,d6()]);parts.push(r.map(([i,v])=>`${pname(ps[i])} ${v}`).join(", "));const m=Math.max(...r.map(x=>x[1]));pool=r.filter(x=>x[1]===m).map(x=>x[0])}
+  game.turn=pool[0]; say("rollOff",parts.join(" · "),pname(ps[pool[0]]));
+  setup=null; saveGame(); drawPanel(); drawPieces();
+}
+async function animateRoll(){let v;for(let i=0;i<7;i++){v=d6();game.die=v;const d=$(".die");if(d)d.outerHTML=dieHTML(v);await sleep(60)}return v}
+function chooseFork(opts){game.fork=opts;drawPieces();drawPanel();return new Promise(r=>forkResolve=r)}
+async function move(p,steps,G0){
+  for(let k=0;k<steps;k++){
+    const opts=GB.next[p.pos]; if(!opts) break;
+    const to=opts.length>1?await chooseFork(opts):opts[0];
+    if(game!==G0||game.phase!=="play") return;
+    p.pos=to;p.trail.push(to);drawPieces();await sleep(190);
+    if(to==="B") break;
+  }
+  const j=GB.jump[p.pos];
+  if(game!==G0||game.phase!=="play") return;
+  if(j){say("arrow");drawPanel();await sleep(450);p.pos=j;p.trail.push(j);drawPieces();await sleep(500)}
+}
+async function takeTurn(){
+  if(busy||game.phase!=="play"||game.pending) return;
+  busy=true; drawPanel(); const G0=game, p=cur(); const r=await animateRoll(); game.die=r;
+  const gone=()=>game!==G0||game.phase!=="play";
+  if(p.pos==="B"){
+    if(r===p.pick){p.pos="L";p.trail.push("L");return finish([p],"win")}
+    say("boxFail",pname(p),r,p.pick);drawPanel();await sleep(700);if(gone())return;p.pos="S";p.trail=["S"];p.pick=null;drawPieces();return endTurn();
+  }
+  if(GB.double.includes(p.pos)&&r<3){say("stuck",pname(p),r);return endTurn()}
+  say("rolled",pname(p),r);drawPanel();
+  await move(p,r,G0); if(gone()) return;
+  if(p.pos==="B"){game.pending="pick";busy=false;saveGame();drawPanel();return}
+  const v=game.players.map((q,i)=>i).filter(i=>game.players[i]!==p&&game.players[i].pos===p.pos&&p.pos!=="S");
+  if(v.length){game.pending="bump";game.victims=v;game.bumpN=r;say("bump",pname(p),v.map(i=>pname(game.players[i])).join(g("and")),r);busy=false;saveGame();drawPanel();return}
+  endTurn();
+}
+function endTurn(){game.turn=(game.turn+1)%game.players.length;game.pending=null;game.fork=null;busy=false;saveGame();drawPanel();drawPieces()}
+function finish(ws,kind){ws.forEach(w=>{w.pos="L"});game.phase="over";game.pending=null;busy=false;
+  if(kind==="nobody")say("nobody");else say(kind,ws.map(pname).join(g("and")));saveGame();drawPanel();drawPieces()}
+
+document.addEventListener("click",e=>{
+  if(route()!=="limbokolia") return;
+  const el=e.target.closest("button"); if(!el) return;
+  if(el.id!=="gGong"&&el.id!=="gNew"&&armed){armed=null;drawPanel()}
+  if(el.dataset.tok!==undefined){const p=setup.players[+el.dataset.tok];p.tok=(p.tok+1)%TOKENS.length;drawPanel()}
+  else if(el.dataset.rm!==undefined){setup.players.splice(+el.dataset.rm,1);drawPanel()}
+  else if(el.id==="gAdd"){const used=setup.players.map(p=>p.tok);setup.players.push({name:"",tok:TOKENS.findIndex((_,i)=>!used.includes(i))});drawPanel()}
+  else if(el.id==="gStart") startGame();
+  else if(el.id==="gRoll") takeTurn();
+  else if(el.dataset.fork&&forkResolve){const f=forkResolve;forkResolve=null;game.fork=null;drawPieces();drawPanel();f(el.dataset.fork)}
+  else if(el.dataset.pick){const p=cur();p.pick=+el.dataset.pick;say("waiting",pname(p),p.pick);endTurn()}
+  else if(el.dataset.bump!==undefined){const i=+el.dataset.bump;if(i>=0){const q=game.players[i];for(let k=0;k<game.bumpN&&q.trail.length>1;k++)q.trail.pop();q.pos=q.trail[q.trail.length-1];say("sent",pname(q),game.bumpN)}endTurn()}
+  else if(el.id==="gGong"){if(armed!=="gong"){armed="gong";drawPanel();return}armed=null;forkResolve=null;game.fork=null;
+    const ws=game.players.filter(p=>p.pos==="B");ws.length?finish(ws,"gongWin"):finish([],"nobody")}
+  else if(el.id==="gNew"||el.id==="gAgain"){if(el.id==="gNew"&&armed!=="new"){armed="new";drawPanel();return}
+    armed=null;const prev=game?game.players:null;game=null;forkResolve=null;busy=false;store.set("ccq-game",null);
+    setup={players:prev?prev.map(p=>({name:p.name,tok:Math.max(0,TOKENS.indexOf(p.tok))})):[{name:"",tok:0},{name:"",tok:1}]};drawPanel();drawPieces()}
+});
+document.addEventListener("input",e=>{const i=e.target.dataset&&e.target.dataset.name;if(i!==undefined&&setup)setup.players[+i].name=e.target.value});
+
+function route(){const r=location.hash.replace(/^#\/?/,"").split("/")[0];return views[r]?r:"start"}
+function renderChrome(){
+  document.documentElement.lang=lang;const r=route();
+  $("#nav").innerHTML=Object.entries(t("nav")).map(([k,v])=>`<a href="#${k}" ${k===r?'aria-current="page"':""}>${v}</a>`).join("");
+  $("#menuBtn").textContent=t("menu");
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang));
+  $("#cartBtn").innerHTML=`<span class="w">${t("cart")}</span><b>${Object.values(cart).reduce((s,q)=>s+q,0)}</b>`;
+  $("#cartBtn").setAttribute("aria-label",t("cart"));
+  $("#foot").innerHTML=`<div><p class="big">COCO CHATRU<br>QUARTET</p><div class="flag"><i style="width:3rem;background:var(--red)"></i><i style="width:2rem;background:var(--blue)"></i><span class="ring"></span></div></div>
+   <div><p><b>${t("fBook")}</b><br><span class="sel">cocochatru@gmail.com</span></p>
+   <p><b>${t("fPress")}</b><br>Trygger Music, c/o Håkan Trygger<br>Södermannagatan 55, 116 66 Stockholm<br><span class="sel">hakan@faethon.se</span></p>
+   <p><a href="https://instagram.com/coco_chatru" target="_blank" rel="noopener">Instagram</a> · <a href="https://facebook.com/coco.chatru" target="_blank" rel="noopener">Facebook</a></p></div>
+   <ul>${Object.entries(t("nav")).map(([k,v])=>`<li><a href="#${k}">${v}</a></li>`).join("")}</ul>`;
+}
+function render(){
+  const r=route();$("#main").innerHTML=views[r]();renderChrome();renderCart();if(r==="limbokolia")gameMount();
+  $("#nav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");
+  document.title="Coco Chatru Quartet";
+}
+function renderCart(){
+  const lines=Object.entries(cart).filter(([,q])=>q>0);
+  const total=lines.reduce((s,[id,q])=>s+PRODUCTS.find(p=>p.id===id).price*q,0);
+  $("#drawer").innerHTML=`<header><h2 id="cartTitle" style="font-size:2rem">${t("cart")}</h2><button class="btn ghost" id="closeCart">${t("close")}</button></header>
+   ${lines.length?`<ul class="lines">${lines.map(([id,q])=>{const p=PRODUCTS.find(x=>x.id===id);return `<li><div><b>${L(p.name)}</b><br><span class="mute">${L(p.kind)}</span></div><span>${p.price*q} ${t("kr")}</span>
+     <div class="qty"><button data-q="${id}" data-d="-1" aria-label="−">−</button><span>${q}</span><button data-q="${id}" data-d="1" aria-label="+">+</button></div></li>`}).join("")}</ul>
+     <div class="total"><span>${t("total")}</span><span>${total} ${t("kr")}</span></div>
+     <button class="btn" id="checkout" style="width:100%">${t("checkout")}</button><p class="mute" id="coNote" style="margin-top:.8rem;font-size:.9rem" hidden>${t("checkoutNote")}</p>`
+   :`<p style="margin-top:1.5rem">${t("empty")}</p><a class="btn" href="#shop" id="goShop">${t("nav").shop}</a>`}`;
+}
+function openCart(o){$("#drawer").classList.toggle("open",o);$("#scrim").classList.toggle("open",o);$("#drawer").setAttribute("aria-hidden",!o);if(o)$("#closeCart")?.focus();else $("#cartBtn").focus()}
+document.addEventListener("click",e=>{
+  const add=e.target.closest("[data-add]");
+  if(add){const id=add.dataset.add;cart[id]=(cart[id]||0)+1;store.set("ccq-cart",cart);renderChrome();renderCart();const o=add.textContent;add.textContent=t("added");setTimeout(()=>add.textContent=o,1200)}
+  const q=e.target.closest("[data-q]");
+  if(q){const id=q.dataset.q;cart[id]=Math.max(0,(cart[id]||0)+Number(q.dataset.d));if(!cart[id])delete cart[id];store.set("ccq-cart",cart);renderChrome();renderCart()}
+  if(e.target.closest("#closeCart")||e.target.id==="scrim"||e.target.closest("#goShop"))openCart(false);
+  if(e.target.closest("#checkout"))$("#coNote").hidden=false;
+  const lb=e.target.closest("[data-lang]");if(lb){lang=lb.dataset.lang;store.set("ccq-lang",lang);render()}
+});
+$("#cartBtn").addEventListener("click",()=>openCart(true));
+$("#menuBtn").addEventListener("click",()=>{const o=$("#nav").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",o)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#drawer").classList.contains("open"))openCart(false)});
+window.addEventListener("hashchange",()=>{render();window.scrollTo(0,0);$("#main").focus({preventScroll:true})});
+render();
+</script>
+</body>
+</html>
