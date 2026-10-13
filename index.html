@@ -352,7 +352,7 @@ const MEMBERS = [
 const R="var(--red)", B="var(--blue)", M="var(--mustard)", W="var(--cream);box-shadow:inset 0 0 0 1.5px var(--ink)";
 const ALBUMS = [
   {id:"metropolis", title:"Metropolis", img:"metro_front", year:"2026", cat:"TM5",
-   fmt:{sv:"Dubbel-LP · släpps i november 2026",en:"Double LP · out November 2026"},
+   fmt:{sv:"Dubbel-LP · släpps 20 november 2026",en:"Double LP · out 20 November 2026"},
    text:{sv:"Fjärde albumet, inspirerat av Fritz Langs sci-fi-klassiker men fristående från filmen. Kvartetten skrev en massa musik som skulle kunna fungera som filmmusik och låste sedan in sig i Gul & blå på Konserthuset i tre dagar, för att ge sig på den som de alltid gör: som en jazz- och improvisationsorkester. Soundet är bredare än förut. Den ackordlösa kärnan finns kvar, men här byter alla instrument: piano, keyboards, vibrafon, rototoms och kedjor.",
          en:"The fourth album, inspired by Fritz Lang's sci-fi classic but standing on its own. The quartet wrote a pile of music that could work as film score, then locked themselves into the Gul & blå room at the Stockholm Concert Hall for three days and played it the way they always do: as a jazz and improvising band. The sound is wider than before. The chordless core is still there, but everyone swaps instruments: piano, keyboards, vibraphone, rototoms and chains."},
    credits:{sv:"Inspelad i Konserthuset, Stockholm, 31/7–2/8 2026. Producerad av Coco Chatru Quartet. Inspelning, mix och master: Linus Kåse. Omslagsdesign: Charlie Malmberg. Illustrationer: Knut Larsson.",
@@ -400,11 +400,12 @@ const PRESS = [
 
 const GIGS = {
   upcoming:[
-    {when:{sv:"Sön 11 okt",en:"Sun 11 Oct"}, what:"Engelen", place:{sv:"Stockholm. Under Stockholm Jazz Festival",en:"Stockholm. During Stockholm Jazz Festival"}},
-    {when:{sv:"November",en:"November"}, prel:true, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:{sv:"Bio Capitol, Stockholm. 9–10 eller 16–17 november",en:"Bio Capitol, Stockholm. 9–10 or 16–17 November"}},
-    {when:{sv:"November",en:"November"}, what:{sv:"Skivsläpp: Metropolis, dubbel-LP",en:"Album release: Metropolis, double LP"}, place:{sv:"Trygger Music. Datum och plats meddelas",en:"Trygger Music. Date and venue to be announced"}}
+    {when:{sv:"Tis 17 nov",en:"Tue 17 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
+    {when:{sv:"Ons 18 nov",en:"Wed 18 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
+    {when:{sv:"Fre 20 nov",en:"Fri 20 Nov"}, what:{sv:"Skivsläpp: Metropolis, dubbel-LP",en:"Album release: Metropolis, double LP"}, place:{sv:"Trygger Music. Plats meddelas",en:"Trygger Music. Venue to be announced"}}
   ],
   past:[
+    {when:{sv:"11 okt 2026",en:"11 Oct 2026"}, what:"Engelen", place:{sv:"Stockholm Jazz Festival",en:"Stockholm Jazz Festival"}},
     {when:{sv:"6 okt 2026",en:"6 Oct 2026"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:{sv:"Bio Capitol, Stockholm. Metropolisfestivalen",en:"Bio Capitol, Stockholm. The Metropolis festival"}},
     {when:{sv:"4 okt 2026",en:"4 Oct 2026"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:{sv:"Bio Capitol, Stockholm. Metropolisfestivalen",en:"Bio Capitol, Stockholm. The Metropolis festival"}},
     {when:{sv:"16 dec 2025",en:"16 Dec 2025"}, what:"Glenn Miller Café", place:"Stockholm"},
@@ -418,7 +419,7 @@ const GIGS = {
 };
 
 const PRODUCTS = [
-  {id:"lp-metro", name:"Metropolis", img:"metro_front", kind:{sv:"Dubbel-LP, släpps i november",en:"Double LP, out in November"}, price:375, pre:true},
+  {id:"lp-metro", name:"Metropolis", img:"metro_front", kind:{sv:"Dubbel-LP, släpps 20 november",en:"Double LP, out 20 November"}, price:375, pre:true},
   {id:"lp-lost", name:"Lost Christmas", img:"c_lost", kind:"LP", price:250},
   {id:"lp-limbo", name:"Limbokolia", img:"c_limbo", kind:{sv:"LP, med brädspel",en:"LP, with board game"}, price:250},
   {id:"lp-future", name:"Future", img:"c_future", kind:"LP", price:250},
@@ -432,9 +433,9 @@ const T = {
   nav:{start:"Start",players:"Musikerna",albums:"Skivor",gigs:"Spelningar",media:"Musik & video",coco:"Om Coco",limbokolia:"Spelet",shop:"Butik"},
   menu:"Meny", cart:"Varukorg",
   heroSub:"Egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor, i den legendariska äventyraren Coco Chatrus fotspår.",
-  nextLbl:"Härnäst", nextDay:"11 okt", nextWhere:"Engelen, Stockholm Jazz Festival",
-  next:[["Sön 11 okt","Engelen","Stockholm Jazz Festival"],["November","Metropolis på Bio Capitol","Preliminärt 9–10 eller 16–17/11"],["November","Skivsläpp: Metropolis","Dubbel-LP på Trygger Music"]],
-  relWhen:"Släpps i november 2026", relKind:"Trygger Music · TM5 · Dubbel-LP",
+  nextLbl:"Härnäst", nextDay:"17–18 nov", nextWhere:"Metropolis live på Bio Capitol",
+  next:[["Tis 17 nov","Metropolis på Bio Capitol","Live till Fritz Langs film"],["Ons 18 nov","Metropolis på Bio Capitol","Live till Fritz Langs film"],["Fre 20 nov","Skivsläpp: Metropolis","Dubbel-LP på Trygger Music. Plats meddelas"]],
+  relWhen:"Släpps 20 november 2026", relKind:"Trygger Music · TM5 · Dubbel-LP",
   relText:"Både Fritz Langs film och Thea von Harbous roman utspelar sig 2026, det vill säga nu. Musiken skrevs som tänkbar filmmusik och hade premiär live till filmen på Bio Capitol i oktober. Nu kommer den på dubbelvinyl.",
   preorder:"Förhandsbeställ", more:"Mer om skivan",
   records:"Skivorna", allRecords:"Alla skivor", press:"Pressröster",
@@ -465,9 +466,9 @@ const T = {
   nav:{start:"Home",players:"Players",albums:"Albums",gigs:"Gigs",media:"Music & video",coco:"About Coco",limbokolia:"Game",shop:"Shop"},
   menu:"Menu", cart:"Cart",
   heroSub:"Original jazz for alto sax, baritone sax, double bass and drums, on the trail of the legendary adventurer Coco Chatru.",
-  nextLbl:"Next up", nextDay:"11 Oct", nextWhere:"Engelen, Stockholm Jazz Festival",
-  next:[["Sun 11 Oct","Engelen","Stockholm Jazz Festival"],["November","Metropolis at Bio Capitol","Provisionally 9–10 or 16–17 Nov"],["November","Album release: Metropolis","Double LP on Trygger Music"]],
-  relWhen:"Out November 2026", relKind:"Trygger Music · TM5 · Double LP",
+  nextLbl:"Next up", nextDay:"17–18 Nov", nextWhere:"Metropolis live at Bio Capitol",
+  next:[["Tue 17 Nov","Metropolis at Bio Capitol","Live to Fritz Lang's film"],["Wed 18 Nov","Metropolis at Bio Capitol","Live to Fritz Lang's film"],["Fri 20 Nov","Album release: Metropolis","Double LP on Trygger Music. Venue TBA"]],
+  relWhen:"Out 20 November 2026", relKind:"Trygger Music · TM5 · Double LP",
   relText:"Both Fritz Lang's film and Thea von Harbou's novel are set in 2026, which is to say now. The music was written as would-be film score and premiered live to the film at Bio Capitol in October. Now it arrives on double vinyl.",
   preorder:"Pre-order", more:"More about the album",
   records:"The records", allRecords:"All albums", press:"Press",
