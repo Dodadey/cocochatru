@@ -188,6 +188,10 @@ nav.main a:hover{border-bottom-color:var(--ink)}
 .row{display:grid;grid-template-columns:minmax(8rem,13rem) minmax(0,1fr);gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:baseline}
 .row .when{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:1.7rem;line-height:1}
 .tag{font-family:var(--mono);font-size:.72rem;background:var(--mustard);color:var(--night);padding:.1rem .45rem;margin-left:.5rem;vertical-align:middle;white-space:nowrap}
+.tag.off{display:inline-block;background:var(--red);color:#fff}
+.row.off .when,.row.off h3 s,.row.off .mute{color:var(--mute)}
+.row s{text-decoration-thickness:2px;text-decoration-color:var(--red)}
+.next s{text-decoration-thickness:2px;text-decoration-color:var(--red);color:var(--mute)}
 @media (max-width:640px){.row{grid-template-columns:1fr;gap:.3rem}}
 
 /* media */
@@ -400,9 +404,10 @@ const PRESS = [
 
 const GIGS = {
   upcoming:[
-    {when:{sv:"Tis 17 nov",en:"Tue 17 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
-    {when:{sv:"Ons 18 nov",en:"Wed 18 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
-    {when:{sv:"Fre 20 nov",en:"Fri 20 Nov"}, what:{sv:"Skivsläpp: Metropolis, dubbel-LP",en:"Album release: Metropolis, double LP"}, place:{sv:"Trygger Music. Plats meddelas",en:"Trygger Music. Venue to be announced"}}
+    {off:true, when:{sv:"Tis 17 nov",en:"Tue 17 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
+    {off:true, when:{sv:"Ons 18 nov",en:"Wed 18 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
+    {when:{sv:"Fre 20 nov",en:"Fri 20 Nov"}, what:{sv:"Skivsläpp: Metropolis, dubbel-LP",en:"Album release: Metropolis, double LP"}, place:{sv:'<a href="https://djungelochjazz.se/" target="_blank" rel="noopener">Djungel & Jazz</a>, Hökens gata 10, Stockholm. 17.30–19.30',en:'<a href="https://djungelochjazz.se/" target="_blank" rel="noopener">Djungel & Jazz</a>, Hökens gata 10, Stockholm. 5.30–7.30 pm'}},
+    {when:{sv:"Fre 4 dec",en:"Fri 4 Dec"}, what:{sv:"Metropolis: filmklipp och musik",en:"Metropolis: film excerpts and music"}, place:'<a href="https://sfantikvariatet.carrd.co/" target="_blank" rel="noopener">Stockholms science fiction Antikvariat</a>, Rutger Fuchsgatan 8, Stockholm'}
   ],
   past:[
     {when:{sv:"11 okt 2026",en:"11 Oct 2026"}, what:"Engelen", place:{sv:"Stockholm Jazz Festival",en:"Stockholm Jazz Festival"}},
@@ -433,8 +438,8 @@ const T = {
   nav:{start:"Start",players:"Musikerna",albums:"Skivor",gigs:"Spelningar",media:"Musik & video",coco:"Om Coco",limbokolia:"Spelet",shop:"Butik"},
   menu:"Meny", cart:"Varukorg",
   heroSub:"Egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor, i den legendariska äventyraren Coco Chatrus fotspår.",
-  nextLbl:"Härnäst", nextDay:"17–18 nov", nextWhere:"Metropolis live på Bio Capitol",
-  next:[["Tis 17 nov","Metropolis på Bio Capitol","Live till Fritz Langs film"],["Ons 18 nov","Metropolis på Bio Capitol","Live till Fritz Langs film"],["Fre 20 nov","Skivsläpp: Metropolis","Dubbel-LP på Trygger Music. Plats meddelas"]],
+  nextLbl:"Härnäst", nextDay:"20 nov", nextWhere:"Skivsläpp på Djungel & Jazz",
+  next:[["Tis 17 & ons 18 nov · Inställt","<s>Metropolis på Bio Capitol</s>","Konserterna är inställda"],["Fre 20 nov, 17.30–19.30","Skivsläpp: Metropolis","Dubbel-LP på Trygger Music. Djungel & Jazz, Hökens gata 10"],["Fre 4 dec","Metropolis: film och musik","Stockholms science fiction Antikvariat, Rutger Fuchsgatan 8"]],
   relWhen:"Släpps 20 november 2026", relKind:"Trygger Music · TM5 · Dubbel-LP",
   relText:"Både Fritz Langs film och Thea von Harbous roman utspelar sig 2026, det vill säga nu. Musiken skrevs som tänkbar filmmusik och hade premiär live till filmen på Bio Capitol i oktober. Nu kommer den på dubbelvinyl.",
   preorder:"Förhandsbeställ", more:"Mer om skivan",
@@ -445,7 +450,7 @@ const T = {
   playersText:["Coco Chatru Quartet spelar egenkomponerad jazz med fokus både på improvisation och utarbetade kompositioner. Musiken har rötter i den svängiga 50- och 60-talsjazzen men ett tydligt nutida sound, och låtarna är byggda för att stå öppna för improvisation och fritt ensemblespel.",
                "Det finns många grupper med två saxofoner och komp, men kombinationen altsax och barytonsax är ovanlig och ger en speciell klang tillsammans med kontrabasen och trummorna. På Metropolis byter alla dessutom instrument."],
   studio:"I studion", listen:"Lyssna", buy:"Köp skivan", selected:"Urval ur låtlistan", side:"Sida",
-  upcoming:"Kommande", past:"Tidigare", prel:"preliminärt",
+  upcoming:"Kommande", past:"Tidigare", prel:"preliminärt", off:"INSTÄLLT",
   mediaIntro:"Alla skivor finns på vinyl och på streamingtjänster som Spotify och Tidal.", stream:"Streama", ucH:"Under uppbyggnad", ucP:"Här kommer filmklipp och bilder. Tills vidare finns musiken på streamingtjänsterna ovan.",
   cocoTitle:"Om Coco",
   coco:["CCQ är döpt efter den legendariska äventyraren, primadonnan och uppfinnaren som kallade sig Coco Chatru.",
@@ -466,8 +471,8 @@ const T = {
   nav:{start:"Home",players:"Players",albums:"Albums",gigs:"Gigs",media:"Music & video",coco:"About Coco",limbokolia:"Game",shop:"Shop"},
   menu:"Menu", cart:"Cart",
   heroSub:"Original jazz for alto sax, baritone sax, double bass and drums, on the trail of the legendary adventurer Coco Chatru.",
-  nextLbl:"Next up", nextDay:"17–18 Nov", nextWhere:"Metropolis live at Bio Capitol",
-  next:[["Tue 17 Nov","Metropolis at Bio Capitol","Live to Fritz Lang's film"],["Wed 18 Nov","Metropolis at Bio Capitol","Live to Fritz Lang's film"],["Fri 20 Nov","Album release: Metropolis","Double LP on Trygger Music. Venue TBA"]],
+  nextLbl:"Next up", nextDay:"20 Nov", nextWhere:"Album release at Djungel & Jazz",
+  next:[["Tue 17 & Wed 18 Nov · Cancelled","<s>Metropolis at Bio Capitol</s>","Both screenings are cancelled"],["Fri 20 Nov, 5.30–7.30 pm","Album release: Metropolis","Double LP on Trygger Music. Djungel & Jazz, Hökens gata 10"],["Fri 4 Dec","Metropolis: film and music","Stockholms science fiction Antikvariat, Rutger Fuchsgatan 8"]],
   relWhen:"Out 20 November 2026", relKind:"Trygger Music · TM5 · Double LP",
   relText:"Both Fritz Lang's film and Thea von Harbou's novel are set in 2026, which is to say now. The music was written as would-be film score and premiered live to the film at Bio Capitol in October. Now it arrives on double vinyl.",
   preorder:"Pre-order", more:"More about the album",
@@ -478,7 +483,7 @@ const T = {
   playersText:["Coco Chatru Quartet plays original jazz with equal weight on improvisation and worked-out composition. The music is rooted in the swinging jazz of the 50s and 60s but sounds clearly of today, and the tunes are built to stay open for improvisation and free ensemble playing.",
                "Plenty of groups have two saxophones and a rhythm section, but alto with baritone is an unusual pairing, and it gives a particular sound together with the double bass and drums. On Metropolis everyone swaps instruments as well."],
   studio:"In the studio", listen:"Listen", buy:"Buy the record", selected:"From the track list", side:"Side",
-  upcoming:"Upcoming", past:"Past", prel:"provisional",
+  upcoming:"Upcoming", past:"Past", prel:"provisional", off:"CANCELLED",
   mediaIntro:"All albums are out on vinyl and on streaming services such as Spotify and Tidal.", stream:"Stream", ucH:"Under construction", ucP:"Video clips and photos are on their way. Until then, the music is on the streaming services above.",
   cocoTitle:"About Coco",
   coco:["CCQ is named after the legendary adventurer, prima donna and inventor who called herself Coco Chatru.",
@@ -508,7 +513,7 @@ const $=s=>document.querySelector(s);
 const img=(k,alt="",cls="")=>`<img src="${IMG[k]}" alt="${alt}" ${cls?`class="${cls}"`:""} loading="lazy">`;
 const motto=`<p class="motto">THE <span class="r">MACHINES</span> ARE COMING. BEWARE NOT TO MAKE ALL <span class="b">HUMANS</span> IN THEIR IMAGE!</p>`;
 const sidesHTML=a=>`<div class="sides">${a.sides.map(s=>`<div class="side"><h4><span class="dot" style="background:${s.c}"></span>${t("side")} ${s.k}</h4><ol>${s.t.map(([n,c,d])=>`<li><span>${n}<small>(${c})</small></span><span class="mono">${d}</span></li>`).join("")}</ol></div>`).join("")}</div>`;
-const gigRow=g=>`<div class="row"><span class="when">${L(g.when)}</span><div><h3>${L(g.what)}${g.prel?`<span class="tag">${t("prel")}</span>`:""}</h3><span class="mute">${L(g.place)}</span></div></div>`;
+const gigRow=g=>g.off?`<div class="row off"><span class="when"><s>${L(g.when)}</s></span><div><h3><s>${L(g.what)}</s><span class="tag off">${t("off")}</span></h3><span class="mute"><s>${L(g.place)}</s></span></div></div>`:`<div class="row"><span class="when">${L(g.when)}</span><div><h3>${L(g.what)}${g.prel?`<span class="tag">${t("prel")}</span>`:""}</h3><span class="mute">${L(g.place)}</span></div></div>`;
 
 const views={
  start:()=>`
