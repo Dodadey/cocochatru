@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Coco Chatru Quartet</title>
-<meta name="description" content="Coco Chatru Quartet spelar egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor. Nya dubbel-LP:n Metropolis släpps i november 2026 på Trygger Music.">
+<meta name="description" content="Coco Chatru Quartet spelar egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor. Nya dubbel-LP:n Metropolis, 20 november 2026 på Trygger Music.">
 <link rel="canonical" href="https://cocochatru.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Coco Chatru Quartet">
-<meta property="og:description" content="Coco Chatru Quartet spelar egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor. Nya dubbel-LP:n Metropolis släpps i november 2026 på Trygger Music.">
+<meta property="og:description" content="Coco Chatru Quartet spelar egenkomponerad jazz för altsax, barytonsax, kontrabas och trummor. Nya dubbel-LP:n Metropolis, 20 november 2026 på Trygger Music.">
 <meta property="og:url" content="https://cocochatru.com/">
 <meta property="og:image" content="https://cocochatru.com/img/band.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MusicGroup", "name": "Coco Chatru Quartet", "url": "https://cocochatru.com/", "genre": "Jazz", "foundingLocation": "Stockholm", "image": "https://cocochatru.com/img/band.jpg", "email": "cocochatru@gmail.com", "sameAs": ["https://instagram.com/coco_chatru", "https://facebook.com/coco.chatru"], "member": [{"@type": "Person", "name": "Linus Kåse"}, {"@type": "Person", "name": "Charlie Malmberg"}, {"@type": "Person", "name": "Håkan Trygger"}, {"@type": "Person", "name": "Daniel Kåse"}], "album": [{"@type": "MusicAlbum", "name": "Future", "datePublished": "2024", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Limbokolia", "datePublished": "2025", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Lost Christmas", "datePublished": "2025", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Metropolis", "datePublished": "2026", "recordLabel": "Trygger Music"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MusicGroup", "name": "Coco Chatru Quartet", "url": "https://cocochatru.com/", "genre": "Jazz", "foundingLocation": "Stockholm", "image": "https://cocochatru.com/img/band.jpg", "email": "cocochatru@gmail.com", "sameAs": ["https://instagram.com/coco_chatru", "https://facebook.com/coco.chatru"], "member": [{"@type": "Person", "name": "Linus Kåse"}, {"@type": "Person", "name": "Charlie Malmberg"}, {"@type": "Person", "name": "Håkan Trygger"}, {"@type": "Person", "name": "Daniel Kåse"}], "album": [{"@type": "MusicAlbum", "name": "Future", "datePublished": "2024", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Limbokolia", "datePublished": "2025", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Lost Christmas", "datePublished": "2025", "recordLabel": "Trygger Music"}, {"@type": "MusicAlbum", "name": "Metropolis", "datePublished": "2026-11-20", "recordLabel": "Trygger Music"}]}</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,700..900&family=Jost:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: the Metropolis sleeve as a site. Paper ground, hard spot-colour blocks, circles and rings; photos full-bleed, text on a narrow measure. */
@@ -92,7 +92,7 @@ nav.main a:hover{border-bottom-color:var(--ink)}
 @media (prefers-reduced-motion:no-preference){.hero .rings{animation:pop .9s cubic-bezier(.2,.8,.2,1) both}@keyframes pop{from{scale:.3;opacity:0}}}
 
 /* next up */
-.next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.next{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));border-bottom:1px solid var(--line)}
 .next a{display:block;text-decoration:none;padding:1.4rem var(--pad);border-right:1px solid var(--line)}
 .next a:last-child{border-right:0}
 .next b{display:block;font-family:var(--display);font-stretch:125%;font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1}
@@ -115,6 +115,31 @@ nav.main a:hover{border-bottom-color:var(--ink)}
 .relC .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
 .relC .img::after{content:"";position:absolute;inset:0;background:var(--blue);mix-blend-mode:color;opacity:.6}
 @media (max-width:820px){.relC{grid-template-columns:1fr}.relC .img{min-height:0;aspect-ratio:1}}
+
+/* release hero, 20 Nov–4 Dec 2026 (sketch C): black field, Moloch, the record out now */
+.relH{position:relative;overflow:hidden;background:var(--night);color:var(--cream);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-areas:"copy art" "tile art";grid-template-rows:1fr auto;min-height:clamp(30rem,60vw,46rem)}
+.relH .copy{grid-area:copy;align-self:end;position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem;min-width:0;padding:clamp(2.2rem,6vw,4.5rem) var(--pad) 1.8rem}
+.relH .kick{color:var(--mustard)}
+.relH h1{font-size:clamp(3rem,10vw,9.2rem);line-height:.84}
+.relH h1 span{display:block}
+.relH h1 span:nth-child(2){color:var(--mustard)}
+.relH .out{margin:0;font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1;color:var(--red);text-transform:uppercase}
+.relH .lede{margin:0;color:var(--cream)}
+.relH .btn{background:var(--mustard);border-color:var(--mustard);color:var(--night)}
+.relH .btn.ghost{background:transparent;border-color:var(--cream);color:var(--cream)}
+.relH .btn:hover{background:var(--red);border-color:var(--red);color:#fff}
+.relH .art{grid-area:art;position:relative;min-height:100%}
+.relH .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 26%}
+.relH .art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night),rgba(19,17,14,0) 28%)}
+.relH .rings{position:absolute;z-index:3;width:clamp(6rem,15vw,13rem);left:calc(-1*clamp(3rem,7.5vw,6.5rem));top:var(--pad)}
+.relH .tile{grid-area:tile;justify-self:start;position:relative;z-index:2;background:var(--red);color:#fff;padding:1.3rem var(--pad);display:flex;flex-direction:column;gap:.3rem;text-decoration:none;min-width:min(19rem,100%)}
+.relH .tile b{font-family:var(--display);font-stretch:125%;font-size:clamp(2.2rem,5vw,3.8rem);line-height:.9}
+.relH .tile:hover{background:var(--blue)}
+@media (max-width:820px){.relH{grid-template-columns:1fr;grid-template-areas:"art" "copy" "tile";grid-template-rows:auto;min-height:0}.relH .art{aspect-ratio:1;min-height:0}.relH .art::after{background:linear-gradient(0deg,var(--night),rgba(19,17,14,0) 38%)}.relH .rings{left:auto;right:var(--pad);top:var(--pad);width:clamp(4.5rem,20vw,7rem)}.relH .copy{padding-top:.4rem}.relH .tile{justify-self:stretch}}
+@media (prefers-reduced-motion:no-preference){.relH .rings{animation:pop .9s cubic-bezier(.2,.8,.2,1) both}}
+.relOut{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);border-bottom:1px solid var(--line)}
+.relOut img{width:100%;aspect-ratio:1;object-fit:cover}
+@media (max-width:820px){.relOut{grid-template-columns:1fr}}
 
 /* shelf */
 .shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:clamp(1rem,3vw,2rem)}
@@ -333,6 +358,14 @@ footer .flag i{display:block;height:.55rem}
 <script>
 const IMG = {"band": "img/band.jpg", "live_gm2": "img/live_gm2.jpg", "live_1150": "img/live_1150.jpg", "metro_front": "img/metro_front.jpg", "moloch": "img/moloch.jpg", "robot": "img/robot.jpg", "p_linus": "img/p_linus.jpg", "p_charlie": "img/p_charlie.jpg", "p_hakan": "img/p_hakan.jpg", "p_daniel": "img/p_daniel.jpg", "c_future": "img/c_future.jpg", "c_limbo": "img/c_limbo.jpg", "c_lost": "img/c_lost.jpg", "s_daniel_vib": "img/s_daniel_vib.jpg", "s_linus": "img/s_linus.jpg", "s_hakan": "img/s_hakan.jpg", "s_charlie": "img/s_charlie.jpg", "tee": "img/tee.jpg", "limbo_board": "img/limbo_board.jpg"};
 
+/* ---------- release clock ----------
+   Metropolis is out 20 Nov 2026. The front page, albums, gigs and shop switch on Stockholm's date, so the site changes over at midnight by itself.
+   Preview another day with ?d=YYYY-MM-DD, e.g. https://cocochatru.com/?d=2026-11-20 */
+const TODAY=(()=>{const q=new URLSearchParams(location.search).get("d");if(q&&/^\d{4}-\d{2}-\d{2}$/.test(q))return q;
+  try{const p={};new Intl.DateTimeFormat("en",{timeZone:"Europe/Stockholm",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).forEach(x=>p[x.type]=x.value);return `${p.year}-${p.month}-${p.day}`}
+  catch(e){return new Date().toISOString().slice(0,10)}})();
+const RELEASE="2026-11-20", REL_HERO_UNTIL="2026-12-04";
+const OUT=TODAY>=RELEASE, RELDAY=TODAY===RELEASE, RELHERO=OUT&&TODAY<=REL_HERO_UNTIL;
 
 const MEMBERS = [
   {name:"Linus Kåse", img:"p_linus", color:"var(--red)",
@@ -356,7 +389,7 @@ const MEMBERS = [
 const R="var(--red)", B="var(--blue)", M="var(--mustard)", W="var(--cream);box-shadow:inset 0 0 0 1.5px var(--ink)";
 const ALBUMS = [
   {id:"metropolis", title:"Metropolis", img:"metro_front", year:"2026", cat:"TM5",
-   fmt:{sv:"Dubbel-LP · släpps 20 november 2026",en:"Double LP · out 20 November 2026"},
+   fmt:OUT?{sv:"Dubbel-LP · 20 november 2026",en:"Double LP · 20 November 2026"}:{sv:"Dubbel-LP · släpps 20 november 2026",en:"Double LP · out 20 November 2026"},
    text:{sv:"Fjärde albumet, inspirerat av Fritz Langs sci-fi-klassiker men fristående från filmen. Kvartetten skrev en massa musik som skulle kunna fungera som filmmusik och låste sedan in sig i Gul & blå på Konserthuset i tre dagar, för att ge sig på den som de alltid gör: som en jazz- och improvisationsorkester. Soundet är bredare än förut. Den ackordlösa kärnan finns kvar, men här byter alla instrument: piano, keyboards, vibrafon, rototoms och kedjor.",
          en:"The fourth album, inspired by Fritz Lang's sci-fi classic but standing on its own. The quartet wrote a pile of music that could work as film score, then locked themselves into the Gul & blå room at the Stockholm Concert Hall for three days and played it the way they always do: as a jazz and improvising band. The sound is wider than before. The chordless core is still there, but everyone swaps instruments: piano, keyboards, vibraphone, rototoms and chains."},
    credits:{sv:"Inspelad i Konserthuset, Stockholm, 31/7–2/8 2026. Producerad av Coco Chatru Quartet. Inspelning, mix och master: Linus Kåse. Omslagsdesign: Charlie Malmberg. Illustrationer: Knut Larsson.",
@@ -366,7 +399,10 @@ const ALBUMS = [
     {k:"B",c:B,t:[["Moloch","Trygger","5:57"],["The Father and the Thin Man","L Kåse","4:04"],["Flying Cars","Malmberg","2:57"],["Map of the Dead Man","L Kåse","3:43"]]},
     {k:"C",c:M,t:[["Yoshiwara","L Kåse","2:34"],["The Club","Trygger","2:29"],["Machine Maria Dances","Trygger","5:46"],["The Catacombs","L Kåse","4:26"]]},
     {k:"D",c:W,t:[["Delirium","L Kåse","6:42"],["Return to the Underworld","Trygger","1:59"],["Death to the Machines","L Kåse","2:28"],["Final Battle","Trygger","4:48"]]}],
-   spotify:null},
+   /* STREAMING LINKS – filled in when the album goes live. spotify: the Spotify album URL (drives every "Listen" button).
+      links: other services as ["Name","url"], e.g. ["Apple Music","https://music.apple.com/..."], ["Tidal","https://tidal.com/album/..."] */
+   spotify:null,
+   links:[]},
   {id:"lost", title:"Lost Christmas", img:"c_lost", year:"2025", cat:"TM4",
    credits:{sv:"Omslagsmålning: John Andersson.",en:"Cover painting: John Andersson."},
    text:{sv:"Julmusik till Coco Chatrus förlorade film Lost Christmas (1932). Tretton spår, lekfulla och allvarliga på samma gång.",
@@ -404,10 +440,10 @@ const PRESS = [
 
 const GIGS = {
   upcoming:[
-    {off:true, when:{sv:"Tis 17 nov",en:"Tue 17 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
-    {off:true, when:{sv:"Ons 18 nov",en:"Wed 18 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
-    {when:{sv:"Fre 20 nov",en:"Fri 20 Nov"}, what:{sv:"Skivsläpp: Metropolis, dubbel-LP",en:"Album release: Metropolis, double LP"}, place:{sv:'<a href="https://djungelochjazz.se/" target="_blank" rel="noopener">Djungel & Jazz</a>, Hökens gata 10, Stockholm. 17.30–19.30',en:'<a href="https://djungelochjazz.se/" target="_blank" rel="noopener">Djungel & Jazz</a>, Hökens gata 10, Stockholm. 5.30–7.30 pm'}},
-    {when:{sv:"Fre 4 dec",en:"Fri 4 Dec"}, what:{sv:"Metropolis: filmklipp och musik",en:"Metropolis: film excerpts and music"}, place:'<a href="https://sfantikvariatet.carrd.co/" target="_blank" rel="noopener">Stockholms science fiction Antikvariat</a>, Rutger Fuchsgatan 8, Stockholm'}
+    {d:"2026-11-17", off:true, when:{sv:"Tis 17 nov",en:"Tue 17 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
+    {d:"2026-11-18", off:true, when:{sv:"Ons 18 nov",en:"Wed 18 Nov"}, what:{sv:"Metropolis (1927), live till filmen",en:"Metropolis (1927), live to the film"}, place:"Bio Capitol, Stockholm"},
+    {d:"2026-11-20", was:{sv:"20 nov 2026",en:"20 Nov 2026"}, when:{sv:"Fre 20 nov",en:"Fri 20 Nov"}, what:{sv:"Skivsläpp: Metropolis, dubbel-LP",en:"Album release: Metropolis, double LP"}, place:{sv:'<a href="https://djungelochjazz.se/" target="_blank" rel="noopener">Djungel & Jazz</a>, Hökens gata 10, Stockholm. 17.30–19.30',en:'<a href="https://djungelochjazz.se/" target="_blank" rel="noopener">Djungel & Jazz</a>, Hökens gata 10, Stockholm. 5.30–7.30 pm'}},
+    {d:"2026-12-04", was:{sv:"4 dec 2026",en:"4 Dec 2026"}, when:{sv:"Fre 4 dec",en:"Fri 4 Dec"}, what:{sv:"Metropolis: filmklipp och musik",en:"Metropolis: film excerpts and music"}, place:'<a href="https://sfantikvariatet.carrd.co/" target="_blank" rel="noopener">Stockholms science fiction Antikvariat</a>, Rutger Fuchsgatan 8, Stockholm'}
   ],
   past:[
     {when:{sv:"11 okt 2026",en:"11 Oct 2026"}, what:"Engelen", place:{sv:"Stockholm Jazz Festival",en:"Stockholm Jazz Festival"}},
@@ -423,8 +459,11 @@ const GIGS = {
   ]
 };
 
+const gigsUp=()=>GIGS.upcoming.filter(g=>!g.d||g.d>=TODAY);
+const gigsPast=()=>[...GIGS.upcoming.filter(g=>g.d&&g.d<TODAY&&!g.off).reverse().map(g=>({...g,when:g.was||g.when})),...GIGS.past];
+
 const PRODUCTS = [
-  {id:"lp-metro", name:"Metropolis", img:"metro_front", kind:{sv:"Dubbel-LP, släpps 20 november",en:"Double LP, out 20 November"}, price:375, pre:true},
+  {id:"lp-metro", name:"Metropolis", img:"metro_front", kind:OUT?{sv:"Dubbel-LP",en:"Double LP"}:{sv:"Dubbel-LP, släpps 20 november",en:"Double LP, out 20 November"}, price:375, pre:!OUT},
   {id:"lp-lost", name:"Lost Christmas", img:"c_lost", kind:"LP", price:250},
   {id:"lp-limbo", name:"Limbokolia", img:"c_limbo", kind:{sv:"LP, med brädspel",en:"LP, with board game"}, price:250},
   {id:"lp-future", name:"Future", img:"c_future", kind:"LP", price:250},
@@ -443,6 +482,15 @@ const T = {
   relWhen:"Släpps 20 november 2026", relKind:"Trygger Music · TM5 · Dubbel-LP",
   relText:"Både Fritz Langs film och Thea von Harbous roman utspelar sig 2026, det vill säga nu. Musiken skrevs som tänkbar filmmusik och hade premiär live till filmen på Bio Capitol i oktober. Nu kommer den på dubbelvinyl.",
   preorder:"Förhandsbeställ", more:"Mer om skivan",
+  outToday:"Ute idag", outNow:"Ute nu", dlp:"Dubbel-LP", tracksH:"Fyra sidor, arton låtar",
+  relTextOut:"Både Fritz Langs film och Thea von Harbous roman utspelar sig 2026, det vill säga nu. Musiken skrevs som tänkbar filmmusik och hade premiär live till filmen på Bio Capitol i oktober. Nu finns den på dubbelvinyl och digitalt.",
+  relHeroKick:"Nytt album · Trygger Music · TM5",
+  relHeroSub:"Fjärde albumet: musik till staden som utspelar sig nu, inspelad under tre dagar i Konserthuset. På dubbel-LP och digitalt.",
+  tileDay:["Idag","17.30","Skivsläpp på Djungel & Jazz, Hökens gata 10"],
+  tileAfter:["Härnäst","4 dec","Metropolis: film och musik på Stockholms science fiction Antikvariat"],
+  tileLater:["Metropolis","Ute nu","Dubbel-LP på Trygger Music"],
+  nextDay0:[["Idag, 17.30–19.30","Skivsläpp: Metropolis","Djungel & Jazz, Hökens gata 10. Kom och fira med oss"],["Fre 4 dec","Metropolis: film och musik","Stockholms science fiction Antikvariat, Rutger Fuchsgatan 8"]],
+  buyTxt:"Direkt från bandet, med post eller på en konsert", listenTxt:"Hela skivan på Spotify",
   records:"Skivorna", allRecords:"Alla skivor", press:"Pressröster",
   mottoCap:"Citat som tillskrivs Coco Chatru vid premiären av Metropolis",
   readMore:"Vem var Coco Chatru?",
@@ -476,6 +524,15 @@ const T = {
   relWhen:"Out 20 November 2026", relKind:"Trygger Music · TM5 · Double LP",
   relText:"Both Fritz Lang's film and Thea von Harbou's novel are set in 2026, which is to say now. The music was written as would-be film score and premiered live to the film at Bio Capitol in October. Now it arrives on double vinyl.",
   preorder:"Pre-order", more:"More about the album",
+  outToday:"Out today", outNow:"Out now", dlp:"Double LP", tracksH:"Four sides, eighteen tunes",
+  relTextOut:"Both Fritz Lang's film and Thea von Harbou's novel are set in 2026, which is to say now. The music was written as would-be film score and premiered live to the film at Bio Capitol in October. Now it is out on double vinyl and digital.",
+  relHeroKick:"New album · Trygger Music · TM5",
+  relHeroSub:"The fourth album: music for the city whose story is set now, recorded over three days at the Stockholm Concert Hall. On double LP and digital.",
+  tileDay:["Today","5.30 pm","Release party at Djungel & Jazz, Hökens gata 10"],
+  tileAfter:["Next up","4 Dec","Metropolis: film and music at Stockholms science fiction Antikvariat"],
+  tileLater:["Metropolis","Out now","Double LP on Trygger Music"],
+  nextDay0:[["Today, 5.30–7.30 pm","Album release: Metropolis","Djungel & Jazz, Hökens gata 10. Come and celebrate with us"],["Fri 4 Dec","Metropolis: film and music","Stockholms science fiction Antikvariat, Rutger Fuchsgatan 8"]],
+  buyTxt:"Straight from the band, by post or at a concert", listenTxt:"The whole album on Spotify",
   records:"The records", allRecords:"All albums", press:"Press",
   mottoCap:"Quote attributed to Coco Chatru at the premiere of Metropolis",
   readMore:"Who was Coco Chatru?",
@@ -515,23 +572,56 @@ const motto=`<p class="motto">THE <span class="r">MACHINES</span> ARE COMING. BE
 const sidesHTML=a=>`<div class="sides">${a.sides.map(s=>`<div class="side"><h4><span class="dot" style="background:${s.c}"></span>${t("side")} ${s.k}</h4><ol>${s.t.map(([n,c,d])=>`<li><span>${n}<small>(${c})</small></span><span class="mono">${d}</span></li>`).join("")}</ol></div>`).join("")}</div>`;
 const gigRow=g=>g.off?`<div class="row off"><span class="when"><s>${L(g.when)}</s></span><div><h3><s>${L(g.what)}</s><span class="tag off">${t("off")}</span></h3><span class="mute"><s>${L(g.place)}</s></span></div></div>`:`<div class="row"><span class="when">${L(g.when)}</span><div><h3>${L(g.what)}${g.prel?`<span class="tag">${t("prel")}</span>`:""}</h3><span class="mute">${L(g.place)}</span></div></div>`;
 
+/* front page state: before release, release day, release weeks (until REL_HERO_UNTIL), later */
+const extA=u=>/^https?:/.test(u)?' target="_blank" rel="noopener"':"";
+const listenBtn=(cls="btn")=>ALBUMS[0].spotify?`<a class="${cls}" target="_blank" rel="noopener" href="${ALBUMS[0].spotify}">${t("listen")}</a>`:"";
+const relActs=()=>OUT?`${listenBtn()}<a class="btn${ALBUMS[0].spotify?" ghost":""}" href="#shop">${t("buy")}</a><a class="btn ghost" href="#albums">${t("more")}</a>`
+  :`<a class="btn" href="#shop">${t("preorder")}</a><a class="btn ghost" href="#albums">${t("more")}</a>`;
+function homeState(){
+  const m=ALBUMS[0], price=PRODUCTS.find(p=>p.id==="lp-metro").price;
+  const buy=[`${t("dlp")} · ${price} ${t("kr")}`,t("buy"),t("buyTxt"),"#shop"];
+  const listen=m.spotify?[t("stream"),`${t("listen")}: Metropolis`,t("listenTxt"),m.spotify]:null;
+  if(!OUT){const n=t("next").map(x=>[...x,"#gigs"]);return {tile:[t("nextLbl"),t("nextDay"),t("nextWhere"),"#gigs"],next:TODAY>"2026-11-18"?n.slice(1):n}}
+  if(RELDAY)return {tile:[...t("tileDay"),"#gigs"],next:[...t("nextDay0").map(x=>[...x,"#gigs"]),listen||buy]};
+  if(TODAY<=REL_HERO_UNTIL)return {tile:[...t("tileAfter"),"#gigs"],next:[[...t("nextDay0")[1],"#gigs"],buy,listen].filter(Boolean)};
+  return {tile:[...t("tileLater"),"#albums"],next:[]};
+}
+
 const views={
- start:()=>`
+ start:()=>{const s=homeState(), m=ALBUMS[0];
+  const tile=`<a class="tile" href="${s.tile[3]}"><span class="mono">${s.tile[0].toUpperCase()}</span><b>${s.tile[1].toUpperCase()}</b><span>${s.tile[2]}</span></a>`;
+  return (RELHERO?`
+  <section class="relH">
+   <div class="copy"><span class="mono kick">${t("relHeroKick").toUpperCase()}</span>
+    <h1><span>METRO</span><span>POLIS</span></h1>
+    <p class="out">${t(RELDAY?"outToday":"outNow")}</p>
+    <p class="lede">${t("relHeroSub")}</p>
+    <div class="actions">${relActs()}</div></div>
+   <div class="art">${img("moloch","Moloch, illustration: Knut Larsson")}<div class="rings" aria-hidden="true"></div></div>
+   ${tile}
+  </section>`:`
   <section class="hero">${img("band","Coco Chatru Quartet live")}<div class="rings" aria-hidden="true"></div>
    <div class="slab">
-    <a class="tile" href="#gigs"><span class="mono">${t("nextLbl").toUpperCase()}</span><b>${t("nextDay").toUpperCase()}</b><span>${t("nextWhere")}</span></a>
+    ${tile}
     <div><h1>COCO<br>CHATRU</h1><p class="lede">${t("heroSub")}</p></div>
    </div>
-  </section>
-  <section class="next">${t("next").map(([d,w,x])=>`<a href="#gigs"><span class="mono mute">${d.toUpperCase()}</span><b>${w}</b><span class="mute">${x}</span></a>`).join("")}</section>
+  </section>`)+`
+  ${s.next.length?`<section class="next" style="--n:${s.next.length}">${s.next.map(([d,w,x,h])=>`<a href="${h}"${extA(h)}><span class="mono mute">${d.toUpperCase()}</span><b>${w}</b><span class="mute">${x}</span></a>`).join("")}</section>`:""}`+
+  (RELHERO?`
+  <section class="wrap relOut">
+   <div>${img("metro_front","Metropolis")}</div>
+   <div><span class="mono mute">${L(m.fmt).toUpperCase()} · TRYGGER MUSIC · ${m.cat}</span>
+    <h2 style="margin-top:.6rem">${t("tracksH")}</h2>${sidesHTML(m)}<p class="credits">${L(m.credits)}</p>
+    <div class="actions">${listenBtn()}<a class="btn${m.spotify?" ghost":""}" href="#shop">${t("buy")}</a></div></div>
+  </section>`:`
   <section class="relC">
    <div class="copy"><span class="mono" style="color:var(--mustard)">${t("relKind").toUpperCase()}</span>
     <h2><span>METRO</span><span>POLIS</span></h2>
-    <p class="when">${t("relWhen")}</p>
-    <p class="lede">${t("relText")}</p>
-    <div class="actions"><a class="btn" href="#shop">${t("preorder")}</a><a class="btn ghost" href="#albums">${t("more")}</a></div></div>
+    <p class="when">${OUT?t("outNow"):t("relWhen")}</p>
+    <p class="lede">${OUT?t("relTextOut"):t("relText")}</p>
+    <div class="actions">${relActs()}</div></div>
    <div class="img">${img("moloch","Moloch, illustration: Knut Larsson")}</div>
-  </section>
+  </section>`)+`
   <section class="wrap" style="border-bottom:1px solid var(--line)">
     <div class="headrow"><h2>${t("records")}</h2><a class="btn ghost" href="#albums">${t("allRecords")}</a></div>
     <div class="shelf">${ALBUMS.map(a=>`<a href="#albums">${img(a.img,a.title)}<div class="cap"><span>${a.title}</span><span class="mono mute">${a.year}</span></div></a>`).join("")}</div>
@@ -545,7 +635,7 @@ const views={
   <section class="wrap cocoband">
     <div>${motto}<p class="motto-cap mono">${t("mottoCap")}</p><a class="btn" style="margin-top:1.6rem" href="#coco">${t("readMore")}</a></div>
     <div class="rings" aria-hidden="true"></div>
-  </section>`,
+  </section>`},
 
  players:()=>`<section class="wrap"><h1 class="page">${t("nav").players}</h1>
    <div class="measure"><p class="lede">${t("playersIntro")}</p>${t("playersText").map(p=>`<p>${p}</p>`).join("")}</div></section>
@@ -565,18 +655,18 @@ const views={
       <p class="lede">${L(a.text)}</p>
       ${a.sides?sidesHTML(a):`<p class="mono mute" style="margin-bottom:.3rem">${t("selected").toUpperCase()}</p><ul class="tracks">${a.tracks.map(x=>`<li>${x}</li>`).join("")}</ul>`}
       ${a.credits?`<p class="credits">${L(a.credits)}</p>`:""}
-      <div class="actions"><a class="btn" href="#shop">${a.id==="metropolis"?t("preorder"):t("buy")}</a>
-      ${a.spotify?`<a class="btn ghost" target="_blank" rel="noopener" href="${a.spotify}">${t("listen")}</a>`:""}${a.id==="limbo"?`<a class="btn ghost" href="#limbokolia">◎ ${GT[lang].play}</a>`:""}</div>
+      <div class="actions"><a class="btn" href="#shop">${a.id==="metropolis"&&!OUT?t("preorder"):t("buy")}</a>
+      ${a.spotify?`<a class="btn ghost" target="_blank" rel="noopener" href="${a.spotify}">${t("listen")}</a>`:""}${(a.links||[]).map(([n,u])=>`<a class="btn ghost" target="_blank" rel="noopener" href="${u}">${n}</a>`).join("")}${a.id==="limbo"?`<a class="btn ghost" href="#limbokolia">◎ ${GT[lang].play}</a>`:""}</div>
     </div></article>`).join("")}</section>`,
 
  gigs:()=>`<section class="wrap"><h1 class="page">${t("nav").gigs}</h1>
   <h2 style="margin-bottom:1rem">${t("upcoming")}</h2>
-  <div class="rows" style="margin-bottom:3.5rem">${GIGS.upcoming.map(gigRow).join("")}</div>
+  <div class="rows" style="margin-bottom:3.5rem">${gigsUp().map(gigRow).join("")}</div>
   <h2 style="margin-bottom:1rem">${t("past")}</h2>
-  <div class="rows">${GIGS.past.map(gigRow).join("")}</div></section>`,
+  <div class="rows">${gigsPast().map(gigRow).join("")}</div></section>`,
 
  media:()=>`<section class="wrap"><h1 class="page">${t("nav").media}</h1><p class="lede">${t("mediaIntro")}</p>
-  <div class="actions" style="margin:1.5rem 0 3.5rem">${ALBUMS.filter(a=>a.spotify).map(a=>`<a class="btn ghost" target="_blank" rel="noopener" href="${a.spotify}">${t("stream")}: ${a.title}</a>`).join("")}</div>
+  <div class="actions" style="margin:1.5rem 0 3.5rem">${ALBUMS.filter(a=>a.spotify).map(a=>`<a class="btn ghost" target="_blank" rel="noopener" href="${a.spotify}">${t("stream")}: ${a.title}</a>`).join("")}${ALBUMS.flatMap(a=>(a.links||[]).map(([n,u])=>`<a class="btn ghost" target="_blank" rel="noopener" href="${u}">${n}: ${a.title}</a>`)).join("")}</div>
   <div class="uc" role="note"><div class="stripes" aria-hidden="true"></div><div class="uc-body"><span class="ring" aria-hidden="true"></span><div><b>${t("ucH")}</b><p>${t("ucP")}</p></div></div><div class="stripes" aria-hidden="true"></div></div></section>`,
 
  coco:()=>{const c=t("coco");return `<section class="wrap"><h1 class="page">${t("cocoTitle")}</h1>
