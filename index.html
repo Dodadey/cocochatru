@@ -401,8 +401,8 @@ const ALBUMS = [
     {k:"D",c:W,t:[["Delirium","L Kåse","6:42"],["Return to the Underworld","Trygger","1:59"],["Death to the Machines","L Kåse","2:28"],["Final Battle","Trygger","4:48"]]}],
    /* STREAMING LINKS – filled in when the album goes live. spotify: the Spotify album URL (drives every "Listen" button).
       links: other services as ["Name","url"], e.g. ["Apple Music","https://music.apple.com/..."], ["Tidal","https://tidal.com/album/..."] */
-   spotify:null,
-   links:[]},
+   spotify:"https://open.spotify.com/album/2PW4A5a9QzNLxGDqpUUtXs",
+   links:[["Apple Music","https://music.apple.com/se/album/metropolis/6814979102"],["Tidal","https://tidal.com/album/563294511"],["Deezer","https://www.deezer.com/album/1103178342"]]},
   {id:"lost", title:"Lost Christmas", img:"c_lost", year:"2025", cat:"TM4",
    credits:{sv:"Omslagsmålning: John Andersson.",en:"Cover painting: John Andersson."},
    text:{sv:"Julmusik till Coco Chatrus förlorade film Lost Christmas (1932). Tretton spår, lekfulla och allvarliga på samma gång.",
@@ -497,7 +497,7 @@ const T = {
   playersIntro:"Två saxofoner, kontrabas och trummor.",
   playersText:["Coco Chatru Quartet spelar egenkomponerad jazz med fokus både på improvisation och utarbetade kompositioner. Musiken har rötter i den svängiga 50- och 60-talsjazzen men ett tydligt nutida sound, och låtarna är byggda för att stå öppna för improvisation och fritt ensemblespel.",
                "Det finns många grupper med två saxofoner och komp, men kombinationen altsax och barytonsax är ovanlig och ger en speciell klang tillsammans med kontrabasen och trummorna. På Metropolis byter alla dessutom instrument."],
-  studio:"I studion", listen:"Lyssna", buy:"Köp skivan", selected:"Urval ur låtlistan", side:"Sida",
+  studio:"I studion", listen:"Lyssna nu", buy:"Köp skivan", selected:"Urval ur låtlistan", side:"Sida",
   upcoming:"Kommande", past:"Tidigare", prel:"preliminärt", off:"INSTÄLLT",
   mediaIntro:"Alla skivor finns på vinyl och på streamingtjänster som Spotify och Tidal.", stream:"Streama", ucH:"Under uppbyggnad", ucP:"Här kommer filmklipp och bilder. Tills vidare finns musiken på streamingtjänsterna ovan.",
   cocoTitle:"Om Coco",
@@ -539,7 +539,7 @@ const T = {
   playersIntro:"Two saxophones, double bass and drums.",
   playersText:["Coco Chatru Quartet plays original jazz with equal weight on improvisation and worked-out composition. The music is rooted in the swinging jazz of the 50s and 60s but sounds clearly of today, and the tunes are built to stay open for improvisation and free ensemble playing.",
                "Plenty of groups have two saxophones and a rhythm section, but alto with baritone is an unusual pairing, and it gives a particular sound together with the double bass and drums. On Metropolis everyone swaps instruments as well."],
-  studio:"In the studio", listen:"Listen", buy:"Buy the record", selected:"From the track list", side:"Side",
+  studio:"In the studio", listen:"Listen now", buy:"Buy the record", selected:"From the track list", side:"Side",
   upcoming:"Upcoming", past:"Past", prel:"provisional", off:"CANCELLED",
   mediaIntro:"All albums are out on vinyl and on streaming services such as Spotify and Tidal.", stream:"Stream", ucH:"Under construction", ucP:"Video clips and photos are on their way. Until then, the music is on the streaming services above.",
   cocoTitle:"About Coco",
@@ -612,7 +612,7 @@ const views={
    <div>${img("metro_front","Metropolis")}</div>
    <div><span class="mono mute">${L(m.fmt).toUpperCase()} · TRYGGER MUSIC · ${m.cat}</span>
     <h2 style="margin-top:.6rem">${t("tracksH")}</h2>${sidesHTML(m)}<p class="credits">${L(m.credits)}</p>
-    <div class="actions">${listenBtn()}<a class="btn${m.spotify?" ghost":""}" href="#shop">${t("buy")}</a></div></div>
+    <div class="actions">${listenBtn()}<a class="btn${m.spotify?" ghost":""}" href="#shop">${t("buy")}</a></div>${(m.links||[]).length?`<div class="actions" style="margin-top:.6rem">${m.links.map(([n,u])=>`<a class="btn ghost" target="_blank" rel="noopener" href="${u}">${n}</a>`).join("")}</div>`:""}</div>
   </section>`:`
   <section class="relC">
    <div class="copy"><span class="mono" style="color:var(--mustard)">${t("relKind").toUpperCase()}</span>
