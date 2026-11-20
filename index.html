@@ -129,6 +129,7 @@ nav.main a:hover{border-bottom-color:var(--ink)}
 .relH .btn.ghost{background:transparent;border-color:var(--cream);color:var(--cream)}
 .relH .btn:hover{background:var(--red);border-color:var(--red);color:#fff}
 .relH .art{grid-area:art;position:relative;min-height:100%}
+.credit{position:absolute;z-index:3;right:.8rem;bottom:.7rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;color:var(--cream);background:rgba(19,17,14,.65);padding:.15rem .5rem}
 .relH .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 26%}
 .relH .art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night),rgba(19,17,14,0) 28%)}
 .relH .rings{position:absolute;z-index:3;width:clamp(6rem,15vw,13rem);left:calc(-1*clamp(3rem,7.5vw,6.5rem));top:var(--pad)}
@@ -597,7 +598,7 @@ const views={
     <p class="out">${t(RELDAY?"outToday":"outNow")}</p>
     <p class="lede">${t("relHeroSub")}</p>
     <div class="actions">${relActs()}</div></div>
-   <div class="art">${img("moloch","Moloch, illustration: Knut Larsson")}<div class="rings" aria-hidden="true"></div></div>
+   <div class="art">${img("moloch","Moloch, illustration: Knut Larsson")}<div class="rings" aria-hidden="true"></div><span class="credit">${L({sv:"Moloch. Illustration: Knut Larsson",en:"Moloch. Illustration by Knut Larsson"})}</span></div>
    ${tile}
   </section>`:`
   <section class="hero">${img("band","Coco Chatru Quartet live")}<div class="rings" aria-hidden="true"></div>
@@ -620,7 +621,7 @@ const views={
     <p class="when">${OUT?t("outNow"):t("relWhen")}</p>
     <p class="lede">${OUT?t("relTextOut"):t("relText")}</p>
     <div class="actions">${relActs()}</div></div>
-   <div class="img">${img("moloch","Moloch, illustration: Knut Larsson")}</div>
+   <div class="img">${img("moloch","Moloch, illustration: Knut Larsson")}<span class="credit">${L({sv:"Moloch. Illustration: Knut Larsson",en:"Moloch. Illustration by Knut Larsson"})}</span></div>
   </section>`)+`
   <section class="wrap" style="border-bottom:1px solid var(--line)">
     <div class="headrow"><h2>${t("records")}</h2><a class="btn ghost" href="#albums">${t("allRecords")}</a></div>
@@ -648,7 +649,7 @@ const views={
 
  albums:()=>`<section class="wrap"><h1 class="page">${t("nav").albums}</h1>
   ${ALBUMS.map(a=>`<article class="album" id="${a.id}">
-    <div>${img(a.img,a.title,"cov")}${a.id==="metropolis"?`<div class="illus">${img("robot","Robot-Maria, Knut Larsson")}${img("moloch","Moloch, Knut Larsson")}</div>`:""}</div>
+    <div>${img(a.img,a.title,"cov")}${a.id==="metropolis"?`<div class="illus">${img("robot","Robot-Maria, Knut Larsson")}${img("moloch","Moloch, Knut Larsson")}</div><p class="mono mute" style="margin:.5rem 0 0">${L({sv:"Robot-Maria och Moloch. Illustrationer: Knut Larsson",en:"Robot Maria and Moloch. Illustrations by Knut Larsson"})}</p>`:""}</div>
     <div>
       <h2>${a.title}</h2>
       <p class="mono mute" style="margin-top:.6rem">${a.fmt?L(a.fmt).toUpperCase():a.year} · TRYGGER MUSIC${a.cat&&!a.fmt?" · "+a.cat:""}${a.fmt?" · "+a.cat:""}</p>
